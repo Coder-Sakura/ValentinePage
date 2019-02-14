@@ -150,7 +150,7 @@
     root: '/blog/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -243,11 +243,21 @@
       
         
         <li class="menu-item menu-item-home">
+          <a href="https://coder-sakura.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-blog">
           <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            首页
+            blog
           </a>
         </li>
       
@@ -293,47 +303,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -505,6 +477,11 @@
     
 </div>
   
+	</div>
+	<div>
+      
+        
+      
 	</div>
     
 
@@ -700,6 +677,20 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://rj45mp.github.io/" title="某庄" target="_blank">某庄</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -724,6 +715,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -765,7 +763,7 @@
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共442字</span>
+	<span class="post-count">全站共444字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -801,11 +799,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -964,19 +957,6 @@
 
 
 
-  
-  
-  
-  <link rel="stylesheet" href="/blog/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/blog/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/blog/js/src/algolia-search.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1103,10 +1083,10 @@
   <div class="bg_content">
   <canvas id="canvas"></canvas>
 </div>
-	<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
+	<script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script>
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<script type="text/javascript" src="/blog/js/src/clicklove.js"></script>
 <!--崩溃欺骗-->
-<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+<script type="text/javascript" src="/blog/js/src/crash_cheat.js"></script>

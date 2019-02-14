@@ -104,5 +104,5 @@ $(document).ready(function(){
         $('>:first', this).toggleClass('open');
     });
     //默认情况下折叠
-    $("div.fold").css("display","none");
+    $("div.fold").css("display","true");
 });
