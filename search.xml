@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于git的操作的一些记录</title>
+      <link href="/blog/2019/03/03/git-note/"/>
+      <url>/blog/2019/03/03/git-note/</url>
+      
+        <content type="html"><![CDATA[<img src="/blog/2019/03/03/git-note/HeadPicture.png"><hr><blockquote><h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：主要记录git的命令和一些git的知识</p></blockquote><a id="more"></a><h3 id="一、github介绍"><a href="#一、github介绍" class="headerlink" title="一、github介绍"></a>一、github介绍</h3><p><a href="https://github.com/" target="_blank" rel="noopener">github</a>(<del>基佬站</del>)是一个开源代码托管平台(其中当然也有私有项目)，也作为一个版本控制系统，让你对代码的版本控制更加简单，不用去担心代码写错了怎么办？有没有备份？专心自己的项目就好。</p><p>本文没有关于桌面版的git安装、环境变量配置的教程(安装配置的话百度有很多教程)</p><img src="/blog/2019/03/03/git-note/1.jpg"><h3 id="二、github功能"><a href="#二、github功能" class="headerlink" title="二、github功能"></a>二、github功能</h3><ol><li>可以在上面找到许多开源项目、脚本甚至可以在上面找到一些课程</li><li>托管项目。只要连上互联网就可以同步到自己的项目代码或多人跟进项目</li><li>利用github和一些开源的博客系统可以搭建个人博客(本博客是hexo+github搭建的)</li></ol><h3 id="三、git命令"><a href="#三、git命令" class="headerlink" title="三、git命令"></a>三、git命令</h3><ol><li><font color="#FF3030">设置用户名和邮箱</font>，不设置会报“please tell me who you are.”，–global参数表示全局</li></ol><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"Your Name"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"email@example.com"</span></span><br><span class="line">git<span class="built_in"> config </span>--list # 检查设置</span><br></pre></td></tr></table></figure><ol start="2"><li>初始化本地文件夹为git仓库（会生成.git隐藏文件，主要是用于版本控制）</li></ol><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git init</span></span><br></pre></td></tr></table></figure><ol start="3"><li>本地版本管理</li></ol><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git add ./[name]<span class="comment"># 跟踪文件进入暂存区，.表示当前目录所有文件，也可以指定文件</span></span><br><span class="line">git status<span class="comment"># 命令用于显示工作目录和暂存区的状态</span></span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">'提交说明'</span> <span class="comment"># 将暂存区里的改动给提交到本地的版本库</span></span><br><span class="line">git <span class="keyword">log</span> <span class="comment">--pretty=oneline# 查看最近到最远的提交日志，oneline表示每条输出一行</span></span><br><span class="line"><span class="comment">#  $ git log --pretty=oneline</span></span><br><span class="line"><span class="comment">#  f3e98b7f4495c78bf98f2661fad2ae745cd60b63 (HEAD -&gt; master, origin/master) proxy</span></span><br><span class="line"><span class="comment">#  f3e9....这串就是这次提交的版本号</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard [版本号] # 回退/前进到某个指定版本，版本号可以在git log中找到</span></span><br><span class="line"><span class="comment">#  也有快捷的回退命令</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD^# 回退到上个版本</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD^^# 回退到上上个版本</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD~100# 回退到上100个版本</span></span><br></pre></td></tr></table></figure><ol start="3"><li>将本地文件提交到github</li></ol><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add ./(name)</span><br><span class="line">git commit -m <span class="string">'message'</span></span><br><span class="line">git remote add origin [github仓库地址]</span><br><span class="line"><span class="meta"># 如果出现错误：fatal: remote origin already exists</span></span><br><span class="line"><span class="meta"># 执行 git remote rm origin#删除分支</span></span><br><span class="line"><span class="meta"># 再执行 git remote add origin [github仓库地址]#再添加</span></span><br><span class="line">git push origin master# 推送到github仓库</span><br><span class="line"><span class="meta"># 如果出现failed to push som refs to…….</span></span><br><span class="line"><span class="meta"># 需要将github仓库的文件同步下来先</span></span><br><span class="line"><span class="meta"># git pull origin master# pull拉文件下来</span></span><br><span class="line"><span class="meta"># 再执行 git push origin master# push推文件上去</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python爬虫[代理]</title>
       <link href="/blog/2019/02/28/proxy/"/>
       <url>/blog/2019/02/28/proxy/</url>
