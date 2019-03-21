@@ -145,7 +145,8 @@
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/4.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/5.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/6.png">
-<meta property="og:updated_time" content="2019-03-21T14:05:42.321Z">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/7.png">
+<meta property="og:updated_time" content="2019-03-21T14:17:50.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lxml&amp;Xpath">
 <meta name="twitter:description" content="说在前面的话本篇概述：Xpath语法，lxml解析html">
@@ -448,7 +449,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  989字
+                  992字
                 </span>
               
 
@@ -630,6 +631,10 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">'https://hr.tencent.com/position.php?lid=2218&amp;start=0#a'</span></span><br><span class="line">html = requests.get(url=url,headers=headers)<span class="comment"># html.text未经过编码的字符串，unicode字符串</span></span><br><span class="line">etree_obj = etree.HTML(html.text)			<span class="comment"># HTML解析的是字符串，所以html.text</span></span><br><span class="line">result = etree_obj.xpath(<span class="string">"//table[@class='tablelist']//tr[position()&gt;1][position()&lt;11]//text()"</span>)</span><br><span class="line">print(result)</span><br><span class="line">result2 = [x.strip() <span class="keyword">for</span> x <span class="keyword">in</span> result <span class="keyword">if</span> x.strip() != <span class="string">''</span>]</span><br><span class="line">print(result2)</span><br><span class="line">result3 = [print(result2[x],result2[x+<span class="number">1</span>],result2[x+<span class="number">2</span>],result2[x+<span class="number">3</span>],result2[x+<span class="number">4</span>]) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,len(result2),<span class="number">5</span>)]</span><br><span class="line">print(result3)</span><br></pre></td></tr></table></figure>
 <ul>
+<li>结果图</li>
+</ul>
+<img src="/blog/2019/03/13/xpath/7.png">
+<ul>
 <li><h4 id="本篇代码Github地址：https-github-com-Coder-Sakura-exp-tree-master-xpath"><a href="#本篇代码Github地址：https-github-com-Coder-Sakura-exp-tree-master-xpath" class="headerlink" title="本篇代码Github地址：https://github.com/Coder-Sakura/exp/tree/master/xpath"></a>本篇代码Github地址：<a href="https://github.com/Coder-Sakura/exp/tree/master/xpath" target="_blank" rel="noopener">https://github.com/Coder-Sakura/exp/tree/master/xpath</a></h4></li>
 </ul>
 
@@ -661,7 +666,7 @@
   <p><span>本文标题:</span>lxml&Xpath</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月13日 - 20:39:39</p>
-  <p><span>最后更新:</span>2019年03月21日 - 22:05:42</p>
+  <p><span>最后更新:</span>2019年03月21日 - 22:17:50</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/13/xpath/" title="lxml&Xpath">https://coder-sakura.github.io/blog/2019/03/13/xpath/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/13/xpath/" aria-label="复制成功！"></i></span>
   </p>
