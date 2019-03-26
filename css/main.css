@@ -1891,7 +1891,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #88a48f;
+  background: #ff0fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2439,6 +2439,11 @@ pre .javascript .function {
   left: 0;
   z-index: 2080;
   background-color: rgba(0,0,0,0.3);
+}
+@media (max-width: 767px) {
+  .algolia-pop-overlay {
+    z-index: 1000;
+  }
 }
 .algolia-popup {
   overflow: hidden;
