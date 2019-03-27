@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python爬虫-pixiv关注画师作品]]></title>
+    <url>%2Fblog%2F2019%2F03%2F27%2Fpixiv-one%2F</url>
+    <content type="text"><![CDATA[说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单） 1、pixiv介绍 Pixiv 这是一个墙外的网站，需要正确的扶梯姿势和科学上网 当然也可以参考我的方法（nginx + 修改hosts文件） 地址：点击前往 密码:3235 (建议hosts文件取自己需要的那部分) 为什么选pixiv呢？其实在12月份的时候我刚开始学python，这个pixiv的小项目是我自己突发奇想要做的，那时候是新年前一周左右，对于那时候的我来说，pixiv反爬难度一般般，但比较难的数据接口分析、构造url、文件操作、代理、图片合成等（自己一个人盯了这个网站几天，最后完成超级兴奋！） 2、Target 登录账号关注的画师的作品 思路： 首先是模拟登录（） 其次保持会话连接 （基于图片网站，可能是动态加载，那么需要分析接口或者是selenium模拟） 一、登陆chrome F12 查看 from data参数： 参数分析： password：个人密码 pixiv_id：个人id post_key：在post_key_url 中找到post_key，然后网络请求 post 去 login_url 登录 copy]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+        <tag>lxml</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Next主题集成 algolia 站内搜索插件]]></title>
     <url>%2Fblog%2F2019%2F03%2F26%2Falgolia%2F</url>
     <content type="text"><![CDATA[说在前面的话本篇概述：Next主题集成algolia 一、简述 今天添加并完善了下blog的站内搜索（既然next有集成，为何不用呢？） 主要是参考了几篇超级详细的文章 大赞：Hexo+Next集成Algolia搜索、知乎 二、问题枪毙名单1. Not enough rights to update an object near 解决方法：修改Algolia的ACL访问控制列表 将ACL修改为以上所示，文章里的ACL和现在的界面不一样，不知道是我用得少的原因(雾)，找了几分钟左右。 2. Please provide an Algolia index name in your hexo _config.yml flle 解决方法：修改index名称 index名称就是在以下这个界面输入的那个index name 3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing. 这个通常是在hexo algolia的时候出现的问题 其实在上面的文章也有说到，这里简单说一下 解决方法： 1export HEXO_ALGOLIA_INDEXING_KEY=[你的API Key] API Key 是 Search-Only API key]]></content>
