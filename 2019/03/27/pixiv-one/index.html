@@ -133,15 +133,19 @@
 <meta name="description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
 <meta name="keywords" content="python,爬虫,lxml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫-pixiv关注画师作品">
+<meta property="og:title" content="python爬虫-pixiv关注画师作品[1]">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/index.html">
 <meta property="og:site_name" content="Coder_桜">
 <meta property="og:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T16:41:56.224Z">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/1.png">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/2.png">
+<meta property="og:updated_time" content="2019-03-27T18:17:39.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫-pixiv关注画师作品">
+<meta name="twitter:title" content="python爬虫-pixiv关注画师作品[1]">
 <meta name="twitter:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
+<meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
 
 
 
@@ -177,7 +181,7 @@
 
 
 
-  <title>python爬虫-pixiv关注画师作品 | Coder_桜</title>
+  <title>python爬虫-pixiv关注画师作品[1] | Coder_桜</title>
   
 
 
@@ -400,7 +404,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python爬虫-pixiv关注画师作品</h1>
+          <h1 class="post-title" itemprop="name headline">python爬虫-pixiv关注画师作品[1]</h1>
         
 
         <div class="post-meta">
@@ -462,7 +466,7 @@
 
           
           
-             <span id="/blog/2019/03/27/pixiv-one/" class="leancloud_visitors" data-flag-title="python爬虫-pixiv关注画师作品">
+             <span id="/blog/2019/03/27/pixiv-one/" class="leancloud_visitors" data-flag-title="python爬虫-pixiv关注画师作品[1]">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,7 +492,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  336字
+                  915字
                 </span>
               
 
@@ -504,7 +508,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  3分钟
                 </span>
               
             </div>
@@ -525,7 +529,7 @@
       
 
       
-        
+        <img src="/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
 <hr>
 <blockquote>
 <h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）</p>
@@ -535,32 +539,70 @@
 <ul>
 <li><a href="www.pixiv.net">Pixiv</a></li>
 <li>这是一个墙外的网站，需要正确的扶梯姿势和科学上网</li>
-<li>当然也可以参考我的方法（nginx + 修改hosts文件）</li>
-<li>地址：<a href="https://www.lanzous.com/b649306/" target="_blank" rel="noopener">点击前往</a>  密码:3235 (建议hosts文件取自己需要的那部分)</li>
-<li>为什么选pixiv呢？其实在12月份的时候我刚开始学python，这个pixiv的小项目是我自己突发奇想要做的，那时候是新年前一周左右，对于那时候的我来说，pixiv反爬难度一般般，但比较难的数据接口分析、构造url、文件操作、代理、图片合成等（自己一个人盯了这个网站几天，最后完成超级兴奋！）</li>
+<li>当然也可以参考我的方法（nginx + 修改 hosts 文件）</li>
+<li>地址：<a href="https://www.lanzous.com/b649306/" target="_blank" rel="noopener">点击前往</a>  密码:3235 (建议 hosts 文件取自己需要的那部分)</li>
+<li>为什么选 pixiv 呢？其实在12月份的时候我刚开始学 python，这个 pixiv 的小项目是我自己突发奇想要做的，那时候是新年前一周左右，对于那时候的我来说，pixiv 反爬难度一般般，但比较难的数据接口分析、构造url、文件操作、代理、图片合成等（自己一个人盯了这个网站几天，最后完成超级兴奋！）</li>
 </ul>
 </blockquote>
 <h2 id="2、Target"><a href="#2、Target" class="headerlink" title="2、Target"></a>2、Target</h2><blockquote>
 <ul>
 <li>登录账号关注的画师的作品</li>
 <li>思路：<ul>
-<li>首先是模拟登录（）</li>
-<li>其次保持会话连接</li>
-<li>（基于图片网站，可能是动态加载，那么需要分析接口或者是selenium模拟）</li>
+<li>首先是模拟登录（PC 用过 pixiv 的同学都知道在未登录的时候 pixiv 会对用户做一些限制，所以我们要先模拟登录）</li>
+<li>其次保持会话连接（可以考虑 cookie 保存，这里采用的是 requests 的 session 会话连接）</li>
+<li>（基于图片网站，可能是动态加载，那么需要分析接口或者是 selenium 模拟）</li>
+<li>最后才进行网页内容分析，然后抓取保存下来</li>
 </ul>
 </li>
 </ul>
 </blockquote>
 <hr>
-<h3 id="一、登陆"><a href="#一、登陆" class="headerlink" title="一、登陆"></a>一、登陆</h3><p>chrome F12 查看 from data参数：</p>
-
-<p>参数分析：</p>
+<h3 id="3、实现流程"><a href="#3、实现流程" class="headerlink" title="3、实现流程"></a>3、实现流程</h3><blockquote>
+<h4 id="一、查找登录接口"><a href="#一、查找登录接口" class="headerlink" title="一、查找登录接口"></a>一、查找登录接口</h4></blockquote>
+<ul>
+<li>第一次找关于登录接口的时候，一个login都没看到，只看到一个 <a href="http://www.pixiv.net" target="_blank" rel="noopener">www.pixiv.net</a>     ,可惜是get请求的页面。</li>
+<li>在拜读了 <a href="https://blog.csdn.net/df0128/article/details/80953212" target="_blank" rel="noopener">Chrome使用技巧</a> 、<a href="https://blog.csdn.net/Letasian/article/details/78461438" target="_blank" rel="noopener">Chrome开发者工具使用小技巧</a> 后，算是对 chrome 的调试工具有个大概了解的印象，知道了 preserve log 勾选后，可以保留网络日志，于是发现了真正的登录请求</li>
+</ul>
+<img src="/blog/2019/03/27/pixiv-one/1.png">
+<blockquote>
+<p>分析参数</p>
+</blockquote>
 <p>password：个人密码</p>
 <p>pixiv_id：个人id</p>
-<p>post_key：在<a href="https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index" target="_blank" rel="noopener">post_key_url</a> 中找到post_key，然后网络请求 post 去 <a href="https://accounts.pixiv.net/api/login?lang=zh" target="_blank" rel="noopener">login_url</a> 登录</p>
+<p>post_key：不明字符串</p>
+<p>source：pc即电脑端（截图没截全，把return_to漏掉了。。。）</p>
+<p>return_to：是登录成功后跳转的页面，这个可以自己填，貌似默认是 <a href="https://www.pixiv.net/" target="_blank" rel="noopener">https://www.pixiv.net/</a></p>
+<blockquote>
+<p>那么接下来就是找post_key了</p>
+</blockquote>
 <ul>
-<li>copy </li>
+<li>首先pixiv非常友好，所以应该不是js加密，而是在页面中随机生成的。</li>
 </ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 其次在点击登录的时候就跳转 url1 ↓</span></span><br><span class="line"><span class="comment"># url1 = https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index</span></span><br><span class="line"><span class="comment"># 但是登录请求的 url 是 url2 ↓</span></span><br><span class="line"><span class="comment"># url2 = https://accounts.pixiv.net/api/login?lang=zh</span></span><br><span class="line"><span class="comment"># 所以猜想 post_key 应该是在前者中生成的。</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>F12 打开，在 Elements 中 Ctrl + F 查看 post_key</p>
+</blockquote>
+<img src="/blog/2019/03/27/pixiv-one/2.png">
+<blockquote>
+<p> 接下来用 BeautifulSoup 匹配</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.post_key = post_key_soup.find(<span class="string">'input'</span>) [<span class="string">'value'</span>]	</span><br><span class="line"><span class="comment"># 因为是第一个input标签，而find返回的是第一个符合要求的结果</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接着向 url2 发去 post 请求</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'pixiv_id'</span>: self.pixiv_id,</span><br><span class="line">    <span class="string">'password'</span>: self.password,</span><br><span class="line">    <span class="string">'return_to'</span>: self.return_to,</span><br><span class="line">    <span class="string">'post_key'</span>: self.post_key&#125;</span><br><span class="line">rep = se.post(self.login_url, data=data, headers=self.headers,verify=<span class="keyword">False</span>)</span><br><span class="line"><span class="comment"># login_url是上面的 url2</span></span><br><span class="line"><span class="comment"># 我这里 return_to 写的是个人关注画师的那个页面的 url</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>登录代码</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">se = requests.session()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(self)</span>:</span></span><br><span class="line">    post_key_html = self.request(self.base_url)		<span class="comment"># base_url 是上面的 url1</span></span><br><span class="line">    post_key_soup = BeautifulSoup(post_key_html.text, <span class="string">'lxml'</span>)</span><br><span class="line">    self.post_key = post_key_soup.find(<span class="string">'input'</span>)[<span class="string">'value'</span>]</span><br><span class="line">    print(self.post_key)    <span class="comment">#捕获postkey</span></span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'pixiv_id'</span>: self.pixiv_id,</span><br><span class="line">        <span class="string">'password'</span>: self.password,</span><br><span class="line">        <span class="string">'return_to'</span>: self.return_to,</span><br><span class="line">        <span class="string">'post_key'</span>: self.post_key&#125;</span><br><span class="line">    rep = se.post(self.login_url, data=data, headers=self.headers,verify=<span class="keyword">False</span>)	</span><br><span class="line">    <span class="comment"># login_url 是上面的 url2</span></span><br><span class="line">    print(<span class="string">'登陆成功'</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>顺便吐槽下 HTTPS 的证书报警问题</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> requests.packages.urllib3.exceptions <span class="keyword">import</span> InsecureRequestWarning     <span class="comment">#强制取消警告</span></span><br><span class="line">requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>先到这吧，明天继续写解析关注画师页面（页数），寻找数据接口，单图动图多图下载估计写不到了</p>
+<p>へ(￣ ￣;へ) </p>
+</blockquote>
 
       
     </div>
@@ -587,11 +629,11 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>python爬虫-pixiv关注画师作品</p>
+  <p><span>本文标题:</span>python爬虫-pixiv关注画师作品[1]</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月27日 - 21:14:36</p>
-  <p><span>最后更新:</span>2019年03月28日 - 00:41:56</p>
-  <p><span>原始链接:</span><a href="/blog/2019/03/27/pixiv-one/" title="python爬虫-pixiv关注画师作品">https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/</a>
+  <p><span>最后更新:</span>2019年03月28日 - 02:17:39</p>
+  <p><span>原始链接:</span><a href="/blog/2019/03/27/pixiv-one/" title="python爬虫-pixiv关注画师作品[1]">https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -851,7 +893,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-number">1.</span> <span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pixiv介绍"><span class="nav-number">2.</span> <span class="nav-text">1、pixiv介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Target"><span class="nav-number">3.</span> <span class="nav-text">2、Target</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、登陆"><span class="nav-number">3.1.</span> <span class="nav-text">一、登陆</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-number">1.</span> <span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pixiv介绍"><span class="nav-number">2.</span> <span class="nav-text">1、pixiv介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Target"><span class="nav-number">3.</span> <span class="nav-text">2、Target</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3、实现流程"><span class="nav-number">3.1.</span> <span class="nav-text">3、实现流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、查找登录接口"><span class="nav-number">3.1.1.</span> <span class="nav-text">一、查找登录接口</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -907,7 +949,7 @@
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共3.7k字</span>
+	<span class="post-count">全站共4.3k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
