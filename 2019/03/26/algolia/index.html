@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/1.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/2.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/3.png">
-<meta property="og:updated_time" content="2019-03-26T11:50:14.514Z">
+<meta property="og:updated_time" content="2019-04-02T12:58:18.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next主题集成 algolia 站内搜索插件">
 <meta name="twitter:description" content="说在前面的话本篇概述：Next主题集成algolia">
@@ -493,7 +493,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  246字
+                  299字
                 </span>
               
 
@@ -539,9 +539,10 @@
 <h3 id="一、简述"><a href="#一、简述" class="headerlink" title="一、简述"></a>一、简述</h3><ul>
 <li>今天添加并完善了下blog的站内搜索（既然next有集成，为何不用呢？）</li>
 <li>主要是参考了几篇超级详细的文章</li>
-<li>大赞：<a href="http://www.qingpingshan.com/m/view.php?aid=386198" target="_blank" rel="noopener">Hexo+Next集成Algolia搜索</a>、<a href="https://www.zhihu.com/question/46822587" target="_blank" rel="noopener">知乎</a></li>
+<li>大赞：<a href="http://www.qingpingshan.com/m/view.php?aid=386198" target="_blank" rel="noopener">Hexo+Next集成Algolia搜索</a>、<a href="https://www.zhihu.com/question/46822587" target="_blank" rel="noopener">知乎</a>、<a href="https://www.npmjs.com/package/hexo-algolia" target="_blank" rel="noopener">hexo-algolia</a></li>
 </ul>
-<h3 id="二、问题枪毙名单"><a href="#二、问题枪毙名单" class="headerlink" title="二、问题枪毙名单"></a>二、问题枪毙名单</h3><h4 id="1-Not-enough-rights-to-update-an-object-near"><a href="#1-Not-enough-rights-to-update-an-object-near" class="headerlink" title="1. Not enough rights to update an object near"></a>1. Not enough rights to update an object near</h4><ul>
+<h3 id="二、如何更新？"><a href="#二、如何更新？" class="headerlink" title="二、如何更新？"></a>二、如何更新？</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 删除 public 文件夹</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="meta"># 搜集站点的内容并通过 API 发送给 Algolia</span></span><br><span class="line">hexo algolia</span><br><span class="line"><span class="meta"># 如遇到 ERROR [Algolia] Please set an `HEXO_ALGOLIA_INDEXING_KEY` environment variable to enable content indexing.</span></span><br><span class="line"><span class="meta"># export HEXO_ALGOLIA_INDEXING_KEY=[你的API Key]</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、问题枪毙名单"><a href="#三、问题枪毙名单" class="headerlink" title="三、问题枪毙名单"></a>三、问题枪毙名单</h3><h4 id="1-Not-enough-rights-to-update-an-object-near"><a href="#1-Not-enough-rights-to-update-an-object-near" class="headerlink" title="1. Not enough rights to update an object near"></a>1. Not enough rights to update an object near</h4><ul>
 <li>解决方法：修改Algolia的ACL访问控制列表</li>
 <li><img src="/blog/2019/03/26/algolia/1.png"></li>
 <li><img src="/blog/2019/03/26/algolia/2.png"></li>
@@ -594,7 +595,7 @@
   <p><span>本文标题:</span>Next主题集成 algolia 站内搜索插件</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月26日 - 19:25:18</p>
-  <p><span>最后更新:</span>2019年03月26日 - 19:50:14</p>
+  <p><span>最后更新:</span>2019年04月02日 - 20:58:18</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/26/algolia/" title="Next主题集成 algolia 站内搜索插件">https://coder-sakura.github.io/blog/2019/03/26/algolia/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/26/algolia/" aria-label="复制成功！"></i></span>
   </p>
@@ -855,7 +856,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-number">1.</span> <span class="nav-text">说在前面的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、简述"><span class="nav-number">1.1.</span> <span class="nav-text">一、简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、问题枪毙名单"><span class="nav-number">1.2.</span> <span class="nav-text">二、问题枪毙名单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Not-enough-rights-to-update-an-object-near"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. Not enough rights to update an object near</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Please-provide-an-Algolia-index-name-in-your-hexo-config-yml-flle"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. Please provide an Algolia index name in your hexo _config.yml flle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing.</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-number">1.</span> <span class="nav-text">说在前面的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、简述"><span class="nav-number">1.1.</span> <span class="nav-text">一、简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何更新？"><span class="nav-number">1.2.</span> <span class="nav-text">二、如何更新？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、问题枪毙名单"><span class="nav-number">1.3.</span> <span class="nav-text">三、问题枪毙名单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Not-enough-rights-to-update-an-object-near"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. Not enough rights to update an object near</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Please-provide-an-Algolia-index-name-in-your-hexo-config-yml-flle"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. Please provide an Algolia index name in your hexo _config.yml flle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing.</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -31,7 +31,7 @@
   <entry>
     <title><![CDATA[Next主题集成 algolia 站内搜索插件]]></title>
     <url>%2Fblog%2F2019%2F03%2F26%2Falgolia%2F</url>
-    <content type="text"><![CDATA[说在前面的话本篇概述：Next主题集成algolia 一、简述 今天添加并完善了下blog的站内搜索（既然next有集成，为何不用呢？） 主要是参考了几篇超级详细的文章 大赞：Hexo+Next集成Algolia搜索、知乎 二、问题枪毙名单1. Not enough rights to update an object near 解决方法：修改Algolia的ACL访问控制列表 将ACL修改为以上所示，文章里的ACL和现在的界面不一样，不知道是我用得少的原因(雾)，找了几分钟左右。 2. Please provide an Algolia index name in your hexo _config.yml flle 解决方法：修改index名称 index名称就是在以下这个界面输入的那个index name 3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing. 这个通常是在hexo algolia的时候出现的问题 其实在上面的文章也有说到，这里简单说一下 解决方法： 1export HEXO_ALGOLIA_INDEXING_KEY=[你的API Key] API Key 是 Search-Only API key]]></content>
+    <content type="text"><![CDATA[说在前面的话本篇概述：Next主题集成algolia 一、简述 今天添加并完善了下blog的站内搜索（既然next有集成，为何不用呢？） 主要是参考了几篇超级详细的文章 大赞：Hexo+Next集成Algolia搜索、知乎、hexo-algolia 二、如何更新？123456# 删除 public 文件夹hexo clean# 搜集站点的内容并通过 API 发送给 Algoliahexo algolia# 如遇到 ERROR [Algolia] Please set an `HEXO_ALGOLIA_INDEXING_KEY` environment variable to enable content indexing.# export HEXO_ALGOLIA_INDEXING_KEY=[你的API Key] 三、问题枪毙名单1. Not enough rights to update an object near 解决方法：修改Algolia的ACL访问控制列表 将ACL修改为以上所示，文章里的ACL和现在的界面不一样，不知道是我用得少的原因(雾)，找了几分钟左右。 2. Please provide an Algolia index name in your hexo _config.yml flle 解决方法：修改index名称 index名称就是在以下这个界面输入的那个index name 3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing. 这个通常是在hexo algolia的时候出现的问题 其实在上面的文章也有说到，这里简单说一下 解决方法： 1export HEXO_ALGOLIA_INDEXING_KEY=[你的API Key] API Key 是 Search-Only API key]]></content>
       <categories>
         <category>hexo</category>
       </categories>
