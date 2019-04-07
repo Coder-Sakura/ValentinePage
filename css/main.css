@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #04e7a6;
+  background: #bfa3ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3553,15 +3553,6 @@ pre .deletion {
 }
 hr {
   margin: 10px 0px 30px 0px;
-}
-.post-body h2,
-h3,
-h4,
-h5,
-h6 {
-  border-left: 4px solid #a166ab;
-  margin-left: -36px;
-  padding-left: 32px;
 }
 .posts-expand .post-body img {
   border: none;
