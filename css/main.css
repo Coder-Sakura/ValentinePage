@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4bc6;
+  background: #f7a1f1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2023,7 +2023,6 @@ pre .javascript .function {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
-  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -3454,6 +3453,15 @@ pre .deletion {
 }
 .posts-collapse .post-header:hover::before {
   background-color: #000;
+}
+#player {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 9999;
+  opacity: 0.7;
 }
 .menu {
   text-align: center;
