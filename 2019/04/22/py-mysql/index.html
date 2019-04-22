@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="python,爬虫,Xpath,">
+  <meta name="keywords" content="python,mysql,">
 
 
 
@@ -130,27 +130,21 @@
 
 
 
-<meta name="description" content="说在前面的话本篇概述：Xpath语法，lxml解析html">
-<meta name="keywords" content="python,爬虫,Xpath">
+<meta name="description" content="说在前面的话本篇概述：python连接mysql的一些操作，欢迎指错">
+<meta name="keywords" content="python,mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lxml&amp;Xpath">
-<meta property="og:url" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/index.html">
+<meta property="og:title" content="Python&#x2F;Mysql基本使用">
+<meta property="og:url" content="https://coder-sakura.github.io/blog/2019/04/22/py-mysql/index.html">
 <meta property="og:site_name" content="Coder_桜">
-<meta property="og:description" content="说在前面的话本篇概述：Xpath语法，lxml解析html">
+<meta property="og:description" content="说在前面的话本篇概述：python连接mysql的一些操作，欢迎指错">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/HeadPicture.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/1.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/2.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/3.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/4.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/5.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/6.png">
-<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/7.png">
-<meta property="og:updated_time" content="2019-03-27T13:29:30.770Z">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/04/22/py-mysql/HeadPicture.jpg">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/blog/2019/04/22/py-mysql/blog/blog/source/_posts/2019-04-22-py-mysql/1.png">
+<meta property="og:updated_time" content="2019-04-22T14:46:39.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lxml&amp;Xpath">
-<meta name="twitter:description" content="说在前面的话本篇概述：Xpath语法，lxml解析html">
-<meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/03/13/xpath/HeadPicture.png">
+<meta name="twitter:title" content="Python&#x2F;Mysql基本使用">
+<meta name="twitter:description" content="说在前面的话本篇概述：python连接mysql的一些操作，欢迎指错">
+<meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/04/22/py-mysql/HeadPicture.jpg">
 
 
 
@@ -180,13 +174,13 @@
 
 
 
-  <link rel="canonical" href="https://coder-sakura.github.io/blog/2019/03/13/xpath/">
+  <link rel="canonical" href="https://coder-sakura.github.io/blog/2019/04/22/py-mysql/">
 
 
 
 
 
-  <title>lxml&Xpath | Coder_桜</title>
+  <title>Python/Mysql基本使用 | Coder_桜</title>
   
 
 
@@ -394,7 +388,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://coder-sakura.github.io/blog/blog/2019/03/13/xpath/">
+    <link itemprop="mainEntityOfPage" href="https://coder-sakura.github.io/blog/blog/2019/04/22/py-mysql/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Coder-Sakura">
@@ -411,7 +405,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">lxml&Xpath</h1>
+          <h1 class="post-title" itemprop="name headline">Python/Mysql基本使用</h1>
         
 
         <div class="post-meta">
@@ -423,8 +417,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T20:39:39+08:00">
-                2019-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-22T21:08:02+08:00">
+                2019-04-22
               </time>
             
 
@@ -464,8 +458,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2019/03/13/xpath/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/blog/2019/03/13/xpath/" itemprop="commentCount"></span>
+                <a href="/blog/2019/04/22/py-mysql/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog/2019/04/22/py-mysql/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -473,7 +467,7 @@
 
           
           
-             <span id="/blog/2019/03/13/xpath/" class="leancloud_visitors" data-flag-title="lxml&Xpath">
+             <span id="/blog/2019/04/22/py-mysql/" class="leancloud_visitors" data-flag-title="Python/Mysql基本使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -504,7 +498,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  992字
+                  590字
                 </span>
               
 
@@ -520,7 +514,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4分钟
+                  2分钟
                 </span>
               
             </div>
@@ -541,157 +535,27 @@
       
 
       
-        <img src="/blog/2019/03/13/xpath/HeadPicture.png">
+        <img src="/blog/2019/04/22/py-mysql/HeadPicture.jpg">
 <hr>
 <blockquote>
-<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：Xpath语法，lxml解析html</p>
+<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：python连接mysql的一些操作，欢迎指错</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="一、什么是Xpath"><a href="#一、什么是Xpath" class="headerlink" title="一、什么是Xpath?"></a>一、什么是Xpath?</h3><ol>
-<li>XPath 是 XML 路径语言，主要是在 XML 和 HTML 文档中查找我们想要的信息的语言。</li>
-<li>XML 和 HTML 一样也是标记语言，但是 XML 用来传输和存储数据，而 HTML 用来显示数据</li>
-</ol>
-<h3 id="二、Xpath工具"><a href="#二、Xpath工具" class="headerlink" title="二、Xpath工具"></a>二、Xpath工具</h3><ol>
-<li>Google：Xpath Helper</li>
-</ol>
-<p>（Google 插件可到下载<a href="https://www.crx4chrome.com/" target="_blank" rel="noopener">Crx4Chrom</a>(英文)、<a href="http://www.cnplugins.com/" target="_blank" rel="noopener">插件网</a>、<a href="http://chromecj.com/" target="_blank" rel="noopener">Chrome插件网 </a>下载）</p>
-<ol>
-<li>Firefox：Try Xpath</li>
-<li>每个浏览器一般在应用中心或拓展里都可以下载</li>
-</ol>
+<hr>
+<h2 id="1、MySQLdb"><a href="#1、MySQLdb" class="headerlink" title="1、MySQLdb"></a>1、MySQLdb</h2><p><code>python</code>连接<code>mysql</code>用的模块。<code>MySQLdb</code>主要还是聚焦于如何和数据库进行连接和进行基本的操作，操作的体现形式主要还是进行<code>SQL</code>语句的执行。</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install mysqlclient</span><br></pre></td></tr></table></figure>
+<h2 id="2、基本使用"><a href="#2、基本使用" class="headerlink" title="2、基本使用"></a>2、基本使用</h2><h3 id="1、数据库连接"><a href="#1、数据库连接" class="headerlink" title="1、数据库连接"></a>1、数据库连接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"><span class="comment"># 连接数据库 ——&gt; 主机host,端口,用户,密码,数据库,编码</span></span><br><span class="line">conn = MySQLdb.connect(host=<span class="string">'localhost'</span>,port=<span class="number">3306</span>,user=<span class="string">'你的账号'</span>,passwd=<span class="string">'你的密码'</span>,db=<span class="string">'你要操作的数据库'</span>,charset=<span class="string">'utf8'</span>)</span><br><span class="line"><span class="comment"># 连接成功后,创建一个游标对象用于操作数据库</span></span><br><span class="line"><span class="comment"># 获取到游标后再进行数据库操作</span></span><br><span class="line">cur = conn.cursor()</span><br></pre></td></tr></table></figure>
+<h3 id="2、查询"><a href="#2、查询" class="headerlink" title="2、查询"></a>2、查询</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询</span></span><br><span class="line">cur.execute(<span class="string">"SELECT VERSION()"</span>) <span class="comment"># 这里不返回结果，只是执行</span></span><br><span class="line">version = cur.fetchall()</span><br><span class="line"><span class="comment"># 返回的是元组 (('5.7.14',),)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fetchall() 是返回所有匹配的元组,接收全部的返回结果行</span></span><br><span class="line"><span class="comment"># fetchone() 只返回一个匹配的元组,然后游标后移</span></span><br><span class="line"><span class="comment"># 我这里用了自己数据库中的一个表演示fetchall()和fetchone()</span></span><br><span class="line"><span class="comment"># 1. fetchall()</span></span><br><span class="line">cur.execute(<span class="string">"SELECT * from test"</span>)</span><br><span class="line">a = cur.fetchall()</span><br><span class="line">print(a,len(a))</span><br><span class="line"><span class="comment"># 这里数据量太大,结果就不放出来了</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. fetchone()</span></span><br><span class="line">cur.execute(<span class="string">"SELECT * from test"</span>)</span><br><span class="line">data = cur.fetchone()</span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">10</span>:</span><br><span class="line">    print(data)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    data = cur.fetchone()</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>Xpath Helper 界面</p>
+<p> 附图</p>
 </blockquote>
-<img src="/blog/2019/03/13/xpath/1.png">
-<h3 id="三、Xpath语法"><a href="#三、Xpath语法" class="headerlink" title="三、Xpath语法"></a>三、Xpath语法</h3><h4 id="1、路径表达式语法、相对-绝对路径"><a href="#1、路径表达式语法、相对-绝对路径" class="headerlink" title="1、路径表达式语法、相对/绝对路径"></a>1、路径表达式语法、相对/绝对路径</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">表达式</th>
-<th style="text-align:center">路径表达式及描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">节点名称</td>
-<td style="text-align:center">bookstore，选取 bookstore 下的所有子节点(标签)</td>
-</tr>
-<tr>
-<td style="text-align:center">/</td>
-<td style="text-align:center">/bookstore，从根节点下选取所有 bookstore 节点(子元素)</td>
-</tr>
-<tr>
-<td style="text-align:center">//</td>
-<td style="text-align:center">//bookstore，从全局节点中选择 bookstore 节点</td>
-</tr>
-<tr>
-<td style="text-align:center">@</td>
-<td style="text-align:center">//div[@price=‘a’]，选择所有 price 属性为 a 的 div</td>
-</tr>
-<tr>
-<td style="text-align:center">.</td>
-<td style="text-align:center">./input，选择当前节点下的 input</td>
-</tr>
-</tbody>
-</table>
-<h4 id="2、谓语"><a href="#2、谓语" class="headerlink" title="2、谓语"></a>2、谓语</h4><p>html 节点中第一个节点为 1，第二个为 2（需要区分）</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">表达式</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">//ul/li[1]</td>
-<td style="text-align:center">选择 ul 下的第一个 li</td>
-</tr>
-<tr>
-<td style="text-align:center">//ul/li[last()-0]</td>
-<td style="text-align:center">选择 ul 下的最后一个 li</td>
-</tr>
-<tr>
-<td style="text-align:center">//ul/li[last()-1]</td>
-<td style="text-align:center">选择 ul 下的倒数第二个 li</td>
-</tr>
-<tr>
-<td style="text-align:center">//ul/li[position()&lt;4]</td>
-<td style="text-align:center">选择 ul 下前面的 3 个子元素</td>
-</tr>
-<tr>
-<td style="text-align:center">//ul/li[position()&gt;1]</td>
-<td style="text-align:center">选择第二个到最后的所有子元素</td>
-</tr>
-<tr>
-<td style="text-align:center">//li[position()&gt;1] [position()&lt;11]</td>
-<td style="text-align:center">在(2,+∞)中选择前十个</td>
-</tr>
-<tr>
-<td style="text-align:center">text()</td>
-<td style="text-align:center">获取函数文本</td>
-</tr>
-<tr>
-<td style="text-align:center">@class</td>
-<td style="text-align:center">获取标签的class</td>
-</tr>
-</tbody>
-</table>
-<img src="/blog/2019/03/13/xpath/2.png">
-<h4 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">*</th>
-<th style="text-align:center">/bookstore/*，通配符，匹配 bookstore 下的所有子元素</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">@*</td>
-<td style="text-align:center">//div[@*]，选择所有带有属性的 div</td>
-</tr>
-</tbody>
-</table>
-<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><ul>
-<li>“|“    —&gt;    //title | //ul[@class=‘item_con_list’]，选择 title 和对应的 ul</li>
-</ul>
-<h3 id="四、使用lxml-amp-xpath解析html"><a href="#四、使用lxml-amp-xpath解析html" class="headerlink" title="四、使用lxml&amp;xpath解析html"></a>四、使用lxml&amp;xpath解析html</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">html1 = etree.parse(index.html)	<span class="comment"># 可以通过读取html文件的方式</span></span><br><span class="line">html2 = etree.HTML(text)		<span class="comment"># 也可以将字符串解析为HTML文档</span></span><br><span class="line"></span><br><span class="line">result1 = etree.tostring(html2)	<span class="comment"># 将字符串序列化成HTML文档,会自动补全</span></span><br><span class="line"></span><br><span class="line">result2 = html2.xpath(<span class="string">'表达式'</span>)  <span class="comment"># 使用xpath语法</span></span><br></pre></td></tr></table></figure>
-<h3 id="五、Example"><a href="#五、Example" class="headerlink" title="五、Example"></a>五、Example</h3><ul>
-<li>以<a href="https://hr.tencent.com/position.php?lid=2218&amp;start=0#a" target="_blank" rel="noopener">腾讯招聘网</a>为例</li>
-<li>我们要获取到职位名称、职位类别、人数、地点和发布时间等内容</li>
-</ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>table<span class="regexp">//</span>tr</span><br></pre></td></tr></table></figure>
-<p>选择到了13个子元素，分别是表头，翻页和底部其他招聘</p>
-<img src="/blog/2019/03/13/xpath/3.png">
-<img src="/blog/2019/03/13/xpath/4.png">    
-<ul>
-<li>那么可以往上找父元素，扩大范围</li>
-</ul>
-<img src="/blog/2019/03/13/xpath/5.png">    
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//table[@class=<span class="string">'tablelist'</span>]//<span class="keyword">tr</span>[@class=<span class="string">'even'</span>] | <span class="regexp">//table</span>[@class=<span class="string">'tablelist'</span>]//<span class="keyword">tr</span>[@class=<span class="string">'odd'</span>]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用以上表达式，避开表头和翻页</li>
-<li>上述表达式虽然精确但是有点冗长，鉴于网站规律性，可以采用以下表达式</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//table[<span class="string">@class='tablelist'</span>]//tr[<span class="string">position()&gt;1</span>][<span class="symbol">position()&lt;11</span>]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>上面的表达式写在程序里不加text()来取的话，会返回类似 <element tr="" at="" 0x1df36b5bc08=""> 的结果。</element></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">'https://hr.tencent.com/position.php?lid=2218&amp;start=0#a'</span></span><br><span class="line">html = requests.get(url=url,headers=headers)<span class="comment"># html.text未经过编码的字符串，unicode字符串</span></span><br><span class="line">etree_obj = etree.HTML(html.text)			<span class="comment"># HTML解析的是字符串，所以html.text</span></span><br><span class="line">result1 = etree_obj.xpath(<span class="string">"//table[@class='tablelist']//tr[position()&gt;1][position()&lt;11]//text()"</span>)</span><br><span class="line">result2 = etree_obj.xpath(<span class="string">"//table[@class='tablelist']//tr[position()&gt;1][position()&lt;11]"</span>)</span><br><span class="line">print(result1)</span><br><span class="line">print(result2)</span><br></pre></td></tr></table></figure>
-<img src="/blog/2019/03/13/xpath/6.png">
-<ul>
-<li><p>结果可以看到有许多的转义字符，比如：\r、\t</p>
-</li>
-<li><p>最后将代码处理一下，照此方法可以获取到腾讯招聘的所有职位信息(后面有个坑，比如职位类别是空数据的话，XPath匹配到会自动放弃)</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">'https://hr.tencent.com/position.php?lid=2218&amp;start=0#a'</span></span><br><span class="line">html = requests.get(url=url,headers=headers)<span class="comment"># html.text未经过编码的字符串，unicode字符串</span></span><br><span class="line">etree_obj = etree.HTML(html.text)			<span class="comment"># HTML解析的是字符串，所以html.text</span></span><br><span class="line">result = etree_obj.xpath(<span class="string">"//table[@class='tablelist']//tr[position()&gt;1][position()&lt;11]//text()"</span>)</span><br><span class="line">print(result)</span><br><span class="line">result2 = [x.strip() <span class="keyword">for</span> x <span class="keyword">in</span> result <span class="keyword">if</span> x.strip() != <span class="string">''</span>]</span><br><span class="line">print(result2)</span><br><span class="line">result3 = [print(result2[x],result2[x+<span class="number">1</span>],result2[x+<span class="number">2</span>],result2[x+<span class="number">3</span>],result2[x+<span class="number">4</span>]) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,len(result2),<span class="number">5</span>)]</span><br><span class="line">print(result3)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>结果图</li>
-</ul>
-<img src="/blog/2019/03/13/xpath/7.png">
-<ul>
-<li><h4 id="本篇代码Github地址：https-github-com-Coder-Sakura-exp-tree-master-xpath"><a href="#本篇代码Github地址：https-github-com-Coder-Sakura-exp-tree-master-xpath" class="headerlink" title="本篇代码Github地址：https://github.com/Coder-Sakura/exp/tree/master/xpath"></a>本篇代码Github地址：<a href="https://github.com/Coder-Sakura/exp/tree/master/xpath" target="_blank" rel="noopener">https://github.com/Coder-Sakura/exp/tree/master/xpath</a></h4></li>
-</ul>
+<p><img src="/blog/blog/2019/04/22/py-mysql/blog\blog\source\_posts\2019-04-22-py-mysql\1.png" alt="fetchone()"></p>
+<h3 id="3、插入"><a href="#3、插入" class="headerlink" title="3、插入"></a>3、插入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 插入</span></span><br><span class="line"><span class="comment"># sql语句,%s占位</span></span><br><span class="line">sql = <span class="string">"INSERT INTO test(date,tag,title,link) VALUES(%s,%s,%s,%s)"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 插入一条execute() data是元组</span></span><br><span class="line">data = (<span class="string">'19/02/14'</span>, <span class="string">'Android'</span>, <span class="string">'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：'</span>, <span class="string">'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719'</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    cur.execute(sql,data)</span><br><span class="line">    <span class="comment"># 事务commit后才会真正插入数据</span></span><br><span class="line">    conn.commit()</span><br><span class="line"><span class="keyword">except</span> Exception,e:</span><br><span class="line">    <span class="comment"># 出错回滚</span></span><br><span class="line">    conn.rollback()</span><br><span class="line"><span class="keyword">finally</span>：</span><br><span class="line">	cur.close()</span><br><span class="line">	conn.close() <span class="comment"># 断开数据库连接</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 2. 批量插入executemany()</span></span><br><span class="line">datas = [(<span class="string">'19/02/14'</span>, <span class="string">'Android'</span>, <span class="string">'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：'</span>, <span class="string">'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719'</span>),(<span class="string">'19/02/14'</span>, <span class="string">'IoTDevice'</span>, <span class="string">'以家庭路由为例讲解 IoT 逆向工程：'</span>, <span class="string">'http://va.ler.io/myfiles/dva/iot-rev-engineering.pdf'</span>)]</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    cur.executemany(sql,datas)</span><br><span class="line">    conn.commit()</span><br><span class="line"><span class="keyword">except</span> Exception,e:</span><br><span class="line">    <span class="comment"># 出错回滚</span></span><br><span class="line">    conn.rollback()</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close() <span class="comment"># 断开数据库连接</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、修改，更新"><a href="#4、修改，更新" class="headerlink" title="4、修改，更新"></a>4、修改，更新</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sql</span></span><br><span class="line">sql = <span class="string">"UPDATE EMPLOYEE SET AGE = AGE + 1 WHERE SEX = '%c'"</span> % (<span class="string">'M'</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    cur.execute(sql)</span><br><span class="line">    conn.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    conn.rollback()</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+<h3 id="5、删除"><a href="#5、删除" class="headerlink" title="5、删除"></a>5、删除</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sql 删除数据,年龄大于20</span></span><br><span class="line">sql = <span class="string">"DELETE FROM EMPLOYEE WHERE AGE &gt; %s"</span> % (<span class="number">20</span>)</span><br><span class="line"><span class="keyword">try</span>：</span><br><span class="line">	cur.execute(sql)</span><br><span class="line">	conn.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">	conn.rollback()</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">	cur.close()</span><br><span class="line">	conn.close()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -718,12 +582,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>lxml&Xpath</p>
+  <p><span>本文标题:</span>Python/Mysql基本使用</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
-  <p><span>发布时间:</span>2019年03月13日 - 20:39:39</p>
-  <p><span>最后更新:</span>2019年03月27日 - 21:29:30</p>
-  <p><span>原始链接:</span><a href="/blog/2019/03/13/xpath/" title="lxml&Xpath">https://coder-sakura.github.io/blog/2019/03/13/xpath/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/13/xpath/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年04月22日 - 21:08:02</p>
+  <p><span>最后更新:</span>2019年04月22日 - 22:46:39</p>
+  <p><span>原始链接:</span><a href="/blog/2019/04/22/py-mysql/" title="Python/Mysql基本使用">https://coder-sakura.github.io/blog/2019/04/22/py-mysql/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/04/22/py-mysql/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -756,9 +620,7 @@
           
             <a href="/blog/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           
-            <a href="/blog/tags/爬虫/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
-          
-            <a href="/blog/tags/Xpath/" rel="tag"><i class="fa fa-tag"></i> Xpath</a>
+            <a href="/blog/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
           
         </div>
       
@@ -771,8 +633,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/03/03/git-note/" rel="next" title="关于git的操作的一些记录">
-                <i class="fa fa-chevron-left"></i> 关于git的操作的一些记录
+              <a href="/blog/2019/04/19/signature-generator/" rel="next" title="Python/Tkinter/lxml 签名生成器">
+                <i class="fa fa-chevron-left"></i> Python/Tkinter/lxml 签名生成器
               </a>
             
           </div>
@@ -780,10 +642,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2019/03/26/algolia/" rel="prev" title="Next主题集成 algolia 站内搜索插件">
-                Next主题集成 algolia 站内搜索插件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1046,7 +904,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、什么是Xpath"><span class="nav-text">一、什么是Xpath?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Xpath工具"><span class="nav-text">二、Xpath工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Xpath语法"><span class="nav-text">三、Xpath语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、路径表达式语法、相对-绝对路径"><span class="nav-text">1、路径表达式语法、相对/绝对路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、谓语"><span class="nav-text">2、谓语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符"><span class="nav-text">通配符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符"><span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、使用lxml-amp-xpath解析html"><span class="nav-text">四、使用lxml&amp;xpath解析html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、Example"><span class="nav-text">五、Example</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本篇代码Github地址：https-github-com-Coder-Sakura-exp-tree-master-xpath"><span class="nav-text">本篇代码Github地址：https://github.com/Coder-Sakura/exp/tree/master/xpath</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、MySQLdb"><span class="nav-text">1、MySQLdb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、基本使用"><span class="nav-text">2、基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、数据库连接"><span class="nav-text">1、数据库连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、查询"><span class="nav-text">2、查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、插入"><span class="nav-text">3、插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、修改，更新"><span class="nav-text">4、修改，更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、删除"><span class="nav-text">5、删除</span></a></li></ol></li></ol></div>
             
 
           </div>
