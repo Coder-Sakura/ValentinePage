@@ -130,21 +130,23 @@
 
 
 
-<meta name="description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
+<meta name="description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有p站个人收藏的爬虫（这个比较简单）">
 <meta name="keywords" content="python,爬虫,lxml,requests">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python爬虫-pixiv关注画师作品[1]">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/index.html">
 <meta property="og:site_name" content="Coder_桜">
-<meta property="og:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
+<meta property="og:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有p站个人收藏的爬虫（这个比较简单）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/3.png">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/4.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/1.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/2.png">
-<meta property="og:updated_time" content="2019-05-08T22:35:55.269Z">
+<meta property="og:updated_time" content="2019-05-24T07:39:01.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬虫-pixiv关注画师作品[1]">
-<meta name="twitter:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）">
+<meta name="twitter:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有p站个人收藏的爬虫（这个比较简单）">
 <meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
 
 
@@ -285,16 +287,6 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
           </a>
         </li>
       
@@ -499,7 +491,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  922字
+                  1.1k字
                 </span>
               
 
@@ -515,7 +507,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  4分钟
                 </span>
               
             </div>
@@ -539,7 +531,7 @@
         <img src="/blog/2019/03/27/pixiv-one/HeadPicture.jpg">
 <hr>
 <blockquote>
-<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有个个人收藏的抓取（这个比较简单）</p>
+<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有p站个人收藏的爬虫（这个比较简单）</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="1、pixiv介绍"><a href="#1、pixiv介绍" class="headerlink" title="1、pixiv介绍"></a>1、pixiv介绍</h2><blockquote>
@@ -550,6 +542,39 @@
 <li>地址：<a href="https://www.lanzous.com/b649306/" target="_blank" rel="noopener">点击前往</a>  密码:3235 (建议 hosts 文件取自己需要的那部分)</li>
 <li>为什么选 pixiv 呢？其实在12月份的时候我刚开始学 python，这个 pixiv 的小项目是我自己突发奇想要做的，那时候是新年前一周左右，对于那时候的我来说，pixiv 反爬难度一般般，但比较难的数据接口分析、构造url、文件操作、代理、图片合成等（自己一个人盯了这个网站几天，最后完成超级兴奋！）</li>
 </ul>
+</blockquote>
+<hr>
+<h3 id="nginx-host上P站教程——2019-5-24更新"><a href="#nginx-host上P站教程——2019-5-24更新" class="headerlink" title="nginx+host上P站教程——2019.5.24更新"></a><code>nginx</code>+<code>host</code>上P站教程——2019.5.24更新</h3><ol>
+<li>下载上面链接中的压缩包，解压</li>
+</ol>
+<img src="/blog/2019/03/27/pixiv-one/3.png">
+<ol start="2">
+<li><p>复制<code>hosts</code>文件中的代码，追加到当前电脑的<code>hosts</code>文件中</p>
+<blockquote>
+<p> 当前电脑的<code>hosts</code>文件在<code>C:\Windows\System32\drivers\etc</code>目录下，如果没找到的话可以搜索一下或者用<code>everything</code>软件（强烈建议!)进行搜索.</p>
+</blockquote>
+</li>
+</ol>
+<ol start="3">
+<li>打开<code>调试工具（这个功能全）.bat</code></li>
+</ol>
+<img src="/blog/2019/03/27/pixiv-one/4.png">
+<blockquote>
+<p>选择对应的数字序号</p>
+</blockquote>
+<ol start="4">
+<li>Tip</li>
+</ol>
+<blockquote>
+<ol>
+<li>如果正常启动不行的话，可以尝试以下代码</li>
+</ol>
+</blockquote>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon | findstr <span class="string">":443"</span></span><br><span class="line"><span class="meta"># 找到占用了443端口的程序的PID</span></span><br><span class="line"><span class="meta"># 可能是本机虚拟机占用了这个端口</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="2">
+<li>或者手动修改nginx的端口，具体修改流程百度</li>
+</ol>
 </blockquote>
 <h2 id="2、Target"><a href="#2、Target" class="headerlink" title="2、Target"></a>2、Target</h2><blockquote>
 <ul>
@@ -635,7 +660,7 @@
   <p><span>本文标题:</span>Python爬虫-pixiv关注画师作品[1]</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月27日 - 21:14:36</p>
-  <p><span>最后更新:</span>2019年05月09日 - 06:35:55</p>
+  <p><span>最后更新:</span>2019年05月24日 - 15:39:01</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/27/pixiv-one/" title="Python爬虫-pixiv关注画师作品[1]">https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/" aria-label="复制成功！"></i></span>
   </p>
@@ -821,7 +846,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -962,7 +987,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pixiv介绍"><span class="nav-text">1、pixiv介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Target"><span class="nav-text">2、Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、登录模拟实现流程"><span class="nav-text">3、登录模拟实现流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、查找登录接口"><span class="nav-text">一、查找登录接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析参数"><span class="nav-text">分析参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那么接下来就是找post-key了"><span class="nav-text">那么接下来就是找post_key了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录代码"><span class="nav-text">登录代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺便吐槽下-HTTPS-的证书报警问题"><span class="nav-text">顺便吐槽下 HTTPS 的证书报警问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、最后"><span class="nav-text">4、最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pixiv介绍"><span class="nav-text">1、pixiv介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-host上P站教程——2019-5-24更新"><span class="nav-text">nginx+host上P站教程——2019.5.24更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Target"><span class="nav-text">2、Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、登录模拟实现流程"><span class="nav-text">3、登录模拟实现流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、查找登录接口"><span class="nav-text">一、查找登录接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析参数"><span class="nav-text">分析参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那么接下来就是找post-key了"><span class="nav-text">那么接下来就是找post_key了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录代码"><span class="nav-text">登录代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺便吐槽下-HTTPS-的证书报警问题"><span class="nav-text">顺便吐槽下 HTTPS 的证书报警问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、最后"><span class="nav-text">4、最后</span></a></li></ol></div>
             
 
           </div>
@@ -1003,7 +1028,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共9.5k字</span>
+	<span class="post-count">全站共10.5k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
