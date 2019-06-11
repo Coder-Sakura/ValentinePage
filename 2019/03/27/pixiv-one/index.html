@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/4.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/1.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/2.png">
-<meta property="og:updated_time" content="2019-05-24T07:39:01.342Z">
+<meta property="og:updated_time" content="2019-06-11T14:02:55.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬虫-pixiv关注画师作品[1]">
 <meta name="twitter:description" content="说在前面的话本篇概述：大概有几篇是关于pixiv关注画师的作品抓取的思路和代码，后面大概还会有p站个人收藏的爬虫（这个比较简单）">
@@ -536,7 +536,7 @@
 <a id="more"></a>
 <h2 id="1、pixiv介绍"><a href="#1、pixiv介绍" class="headerlink" title="1、pixiv介绍"></a>1、pixiv介绍</h2><blockquote>
 <ul>
-<li><a href="www.pixiv.net">Pixiv</a></li>
+<li><a href="https://www.pixiv.net/" target="_blank" rel="noopener">Pixiv</a></li>
 <li>这是一个墙外的网站，需要正确的扶梯姿势和科学上网</li>
 <li>当然也可以参考我的方法（nginx + 修改 hosts 文件）</li>
 <li>地址：<a href="https://www.lanzous.com/b649306/" target="_blank" rel="noopener">点击前往</a>  密码:3235 (建议 hosts 文件取自己需要的那部分)</li>
@@ -628,7 +628,7 @@
 <h3 id="顺便吐槽下-HTTPS-的证书报警问题"><a href="#顺便吐槽下-HTTPS-的证书报警问题" class="headerlink" title="顺便吐槽下 HTTPS 的证书报警问题"></a>顺便吐槽下 HTTPS 的证书报警问题</h3></blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> requests.packages.urllib3.exceptions <span class="keyword">import</span> InsecureRequestWarning     <span class="comment">#强制取消警告</span></span><br><span class="line">requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</span><br></pre></td></tr></table></figure>
 <h2 id="4、最后"><a href="#4、最后" class="headerlink" title="4、最后"></a>4、最后</h2><blockquote>
-<p>先到这吧，明天继续写解析关注画师页面（页数），寻找数据接口，单图动图多图下载估计写不到了</p>
+<p>先到这吧，后面继续写解析关注画师页面（页数），寻找数据接口，单图动图多图下载估计写不到了</p>
 <p>へ(￣ ￣;へ) </p>
 </blockquote>
 
@@ -660,7 +660,7 @@
   <p><span>本文标题:</span>Python爬虫-pixiv关注画师作品[1]</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月27日 - 21:14:36</p>
-  <p><span>最后更新:</span>2019年05月24日 - 15:39:01</p>
+  <p><span>最后更新:</span>2019年06月11日 - 22:02:55</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/27/pixiv-one/" title="Python爬虫-pixiv关注画师作品[1]">https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/" aria-label="复制成功！"></i></span>
   </p>
@@ -742,44 +742,6 @@
 
 
     <div class="post-spread">
-      
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -1028,7 +990,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共10.8k字</span>
+	<span class="post-count">全站共12k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
