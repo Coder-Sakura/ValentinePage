@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PythonDailyQuestion-0613]]></title>
+    <url>%2Fblog%2F2019%2F06%2F15%2Fpythondailyquestion-0613%2F</url>
+    <content type="text"><![CDATA[说在前面的话本篇概述：0612-每日一问 Tipsgithub：https://github.com/Elegant-Smile/PythonDailyQuestion 1、基础题 从标准输入读取两个整数并打印两行，其中第一行输出两个整数的整除结果；第二行输出两个整数的带小数的除法结果。 123456print('exp:12 24')nums = input('input tow nums:')a,b = nums.split(' ')print(int(a)//int(b))print('%.2f'%(int(a)/int(b))) 2、基础题 使用turtle库，绘制一个风轮效果，其中，每个风轮内角为45度，风轮边长150像素。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬提示：turtle.goto(x,y)函数，能够将turtle画笔移动到坐标(x,y) 3、提高题 列表中有一个数字出现的次数超过列表长度的一半，请找出这个数字。例如，输入一个长度为 9 的列表[1, 2, 3, 2, 2, 2, 5, 4, 2]。数字 2 出现了5次，超过列表长度的一半，因此输出2。如果不存在则输出0。 12345678910111213# 也可以自己指定数组,这里随机生成import randomlens = int(input('The len is :'))t = []for i in range(lens): t.append(random.choice(range(lens)))print('数组为',t)for i in list(set(t)): if t.count(i) &gt; lens//2: print(i)]]></content>
+      <categories>
+        <category>每日一问</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>每日一问</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PythonDailyQuestion-0612]]></title>
+    <url>%2Fblog%2F2019%2F06%2F15%2Fpythondailyquestion-0612%2F</url>
+    <content type="text"><![CDATA[说在前面的话本篇概述：0612-每日一问 Tipsgithub：https://github.com/Elegant-Smile/PythonDailyQuestion 1、概念题 请简述python中有哪些方式实现字符串格式化？ 12345a = 'hello'b = 'world'print(a,b)print('%s %s'%(a,b))print('&#123;&#125; &#123;&#125;'.format(a,b)) 2、基础题 温度的刻画有两个不同体系：摄氏度（Celsius）和华氏度（Fahrenheit）。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬请编写程序将用户输入华氏度转换为摄氏度，或将输入的摄氏度转换为华氏度。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬转换算法如下：（C表示摄氏度、F表示华氏度）‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ C = ( F - 32 ) / 1.8‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ F = C * 1.8 + 32‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬要求如下：‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬(1) 输入输出的摄氏度可采用大小写字母C结尾，温度可以是整数或小数，如：12.34C指摄氏度12.34度；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬(2) 输入输出的华氏度可采用大小写字母F结尾，温度可以是整数或小数，如：87.65F指摄氏度87.65度；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬(3) 输出保留小数点后两位，输入格式错误时，输出提示：输入格式错误；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬(4) 使用input()获得测试用例输入时，不要增加提示字符串。 1234567891011121314def change(t): if t[-1].upper() == 'C': t = float(t[:-1])*1.8+32 print('%.2fF'%t) elif t[-1].upper() == 'F': t = float(t[:-1])-32/1.8 print('%.2fC'%t) else: print('格式错误') if __name__ == '__main__': # print('Exp:12.34C、87.65F') Temperature = input('The Temperature is:') change(Temperature) 3、提高题 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。 1234567891011print('exp整数数组:123456')int_list = list(input('Input The Integer Array:'))even_list = [] # 偶数for i in int_list: if int(i)%2 == 0: int_list.remove(i) even_list.append(i)int_list.extend(even_list)print(int_list)]]></content>
+      <categories>
+        <category>每日一问</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>每日一问</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PythonDailyQuestion-0611]]></title>
+    <url>%2Fblog%2F2019%2F06%2F14%2Fpythondailyquestion-0611%2F</url>
+    <content type="text"><![CDATA[说在前面的话本篇概述：0611-每日一问 Tipsgithub：https://github.com/Elegant-Smile/PythonDailyQuestion 1、基础题 给定任意一个整数，打印出该整数的十进制、八进制、十六进制（大写）、二进制形式的字符串。 12345678910int_num = int(input('input the integer'))# 转二进制print('二进制形式为 : &#123;&#125;'.format(bin(int_num)))# 转八进制print('八进制形式为 : &#123;&#125;'.format(oct(int_num)))# 转十进制print('十进制形式为 : &#123;&#125;'.format(int(int_num)))# 转十六进制print('十六进制形式为 : &#123;&#125;'.format(hex(int_num).upper())) 2、基础题 给用户三次输入用户名和密码的机会，要求如下：‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 如输入第一行输入用户名为‘Kate’,第二行输入密码为‘666666’，输出‘登录成功！’，退出程序；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 当一共有3次输入用户名或密码不正确输出“3次用户名或者密码均有误！退出程序。”。 1234567891011121314151617import sysadmin_username,admin_password = 'Kate','666666'count = 0while True: if count == 3: sys.exit() username = input('Input Your Username: ') password = input('Input Your Password: ') if all([username==admin_username, password==admin_password]): print('登录成功') sys.exit() else: print('用户名或密码错误\n') count += 1 3、提高题 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法 注：先后次序不同 算作是不同的结果 12345678# 递归,参考def jump(n): if n == 1 or n == 2: return n return jump(n-1) + jump(n-2)if __name__ == '__main__': print(jump(8))]]></content>
+      <categories>
+        <category>每日一问</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>每日一问</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PythonDailyQuestion-0610]]></title>
+    <url>%2Fblog%2F2019%2F06%2F14%2Fpythondailyquestion-0610%2F</url>
+    <content type="text"><![CDATA[说在前面的话本篇概述：0610-每日一问 Tipsgithub：https://github.com/Elegant-Smile/PythonDailyQuestion 1、基础题 恺撒密码是古罗马恺撒大帝用来对军事情报进行加解密的算法，它采用了替换方法对信息中的每一个英文字符循环替换为字母表序列中该字符后面的第三个字符，即，字母表的对应关系如下：‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 原文：A B C D E F G H I J K L M N O P Q R S T U V W X Y Z‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 密文：D E F G H I J K L M N O P Q R S T U V W X Y Z A B C‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 对于原文字符P，其密文字符C满足如下条件：C=(P+3) mod 26‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 上述是凯撒密码的加密方法，解密方法反之，即：P=(C-3) mod 26‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬ 假设用户可能使用的输入包含大小写字母a~zA~Z、空格和特殊符号，请编写一个程序，对输入字符串进行恺撒密码加密，直接输出结果，其中空格不用进行加密处理。使用input()获得输入。 123456789101112131415161718# 首先知道2个函数ord() # str -&gt; asciichr() # ascii -&gt; strord('a')# 97chr(ord('a'))# a# a位移1位# ord('a')=97，ord('b')=98chr(ord('a')+((98-97)+1)%26)# b# z位移1位# ord('a')=97，ord('z')=122chr(ord('a')+((122-97)+1)%26)# a 12345678910word = 'za %test' # 加密字符串offset = 3 # 偏移量target = ''for w in word: if 'a' &lt;= w &lt;= 'z': target += chr( ord('a') + ((ord(w)-ord('a')) + offset )%26 ) elif 'A'&lt;= w &lt;='Z': target += chr( ord('A') + ((ord(w)-ord('A')) + offset )%26 ) else: target += w 2、提高题 请实现一个函数用来找出字符串中第1个只出现1次的字符。例如：当从字符串中只读出前两个字符”go”时，第1个只出现次的字符是”g”。当从该字符串中读出前六个字符”google”时，第1个只出现1次的字符是“l”。 1234567import sysa = input('input the word:')for a1 in a: if a.count(a1) == 1: print('第一个只出现一次的字符为&#123;&#125;'.format(a1)) sys.exit()print('没有只出现一次的字符')]]></content>
+      <categories>
+        <category>每日一问</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>每日一问</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python爬虫-pixiv关注画师作品[3]]]></title>
     <url>%2Fblog%2F2019%2F06%2F12%2Fpixiv-three%2F</url>
     <content type="text"><![CDATA[说在前面的话 本篇概述：第二篇的续作，主要是各种图片类型的下载和文件夹创建； github地址、文中代码不一定能直接执行，粘贴过来可能缩进有问题。 1、分析——如何判断类型？ 单图 ↓ 多图 ↓ 动图 仔细观察就会发现： 单图 url : 56309403_p0_square1200.jpg，有p0；pageCount：1 多图 url : 56527887_p0_square1200.jpg，有p0；pageCount：3 动图 url : 57027347_square1200.jpg，无p0；pageCount：1 2、代码——匹配类型123456789101112131415161718def painter_picture(self): ''' 上次的code ''' if pageCount == 1: # 有p0 # 2016/05/23/19/25/26/57027442_p0 # 无p0 # 2016/05/23/19/18/47/57027347 if small_url[51:-15][-2:] == 'p0': print('作品类型：单图\n') self.img_single(small_url,folder_path,folder_id) # 单图 else: print('作品类型：动图\n') self.img_gif(folder_path,folder_id) # 动图 else: print('作品类型：多图\n') self.img_multi(small_url,folder_path,folder_id,pageCount) # 多图 PS：拼接 url 时不要问为啥这么麻烦，看这里 本篇记录的是自己刚学python爬虫第一个爬虫项目的代码，这篇的代码可以说是仅仅是为了实现功能写出来的。 现在也有想法要重构，重构好之后发篇完整的出来，不过没有那么快而已。 现在找到了作品的详细信息接口，后面再更新了，这里用的是之前的方法。 回首看自己2个月前的代码，一点都不优雅。o(╥﹏╥)o 3、分析——创建画师文件夹及作品文件夹 首先指定一个下载目录 下载目录下为每个画师创建一个文件夹，形如：{id}–{name} 画师文件夹下为每个作品创建一个文件夹，形如：{id} 4、代码——文件夹1、创建画师文件夹 此处解决了画师更改名字，会导致该画师所有作品重下。 具体看代码吧，解释也挺麻烦的 123456789101112131415161718# 执行 mkdir_painter() 应在 attention_html() 的 painter_information 循环中# self.father_folder = self.mkdir_painter(painter_id,name)def mkdir_painter (self,painter_id,name): name = re.sub('[\/:*?"&lt;&gt;|]','_',name) folder_name = painter_id + '--' + name # 画师改名字！会导致重下 for folder in os.listdir(self.path): if painter_id == folder.split('--')[0]: print(u'[名字叫&#123;0&#125;文件夹已存在！]'.format(folder_name)) father_folder = os.path.join(self.path,folder) os.chdir(father_folder) ##切换到目录 return father_folder print(u'[建了一个&#123;0&#125;文件夹！]'.format(folder_name)) father_folder = os.path.join(self.path,folder_name) os.makedirs(father_folder) os.chdir(father_folder) ##切换到目录 return father_folder 2、创建作品文件夹12345678910111213def mkdir_works(self,folder_id): folder_path = os.path.join(self.father_folder,folder_id) isExists = os.path.exists(folder_path) if not isExists: print(u'\n[在',self.father_folder,'下建了一个', folder_id, u'文件夹！]') os.makedirs(folder_path) os.chdir(folder_path) ##切换到目录 return folder_path else: print(u'\n[在',self.father_folder,'下已经有', folder_id, u'文件夹！]') os.chdir(folder_path) ##切换到目录 return folder_path 5、单图下载12345678910111213141516171819202122232425262728def img_single(self,small_url,folder_path,folder_id): work_name = folder_id + small_url[-4:] # p站的图片有jpg和png的，但是从works_url获取到的只有小图jpg的url jpg_judge_path = folder_path + '\\' + work_name png_judge_path = folder_path + '\\' + folder_id + '.png' # 判断是否是上次因为jpg不行而下载png的图片，如果是的话，expand_name 用 .png 替换进行比对是否重复 if os.path.exists(jpg_judge_path) == True and os.path.getsize(jpg_judge_path) != 58: # 判断jpg print(jpg_judge_path,'已存在且字节数不为58！') else: if os.path.exists(png_judge_path) == True and os.path.getsize(png_judge_path) != 58: # 判断png print(png_judge_path,'已存在且字节数不为58！') else: try: small_date = small_url[51:-15] #动图的small_url没有p0 head = 'https://i.pximg.net/img-original/img/' img_url = head + small_date + small_url[-4:] #.jpg img_html = self.request(img_url) self.down(img_html,work_name,jpg_judge_path) # time.sleep(2) if os.path.getsize(jpg_judge_path) == 58: print('&#123;&#125;格式不对，准备重下'.format(work_name)) img_url = head + small_date + '.png' img_html = self.request(img_url) self.down_conversion(img_html,folder_id,jpg_judge_path,png_judge_path) except: print(work_name,'下载失败') 6、多图下载1234567891011121314151617def img_multi(self,small_url,folder_path,folder_id,pageCount): for img_num in range(0,pageCount): work_name = folder_id + '-' + str(img_num) + small_url[-4:] jpg_judge_path = folder_path + '\\' + work_name if os.path.exists(jpg_judge_path) == True and os.path.getsize(jpg_judge_path) != 58: print(jpg_judge_path,'已存在且字节数不为58！') else: multi_url = 'https://www.pixiv.net/member_illust.php?mode=manga_big&amp;illust_id=' +folder_id + '&amp;page=' + str(img_num) self.headers['User-Agent'] = random.choice(self.user_agent_list) try: multi_html = self.request(multi_url) multi_html_soup = BeautifulSoup(multi_html.text, 'lxml') img_url = multi_html_soup.find('img')['src'] #要请求src的地址再写入 img_html = self.request(img_url) self.down(img_html,work_name,jpg_judge_path) except: print(work_name,'下载失败') 7、最后 鸽了挺久的，觉得大部分东西代码和实践都说得清楚，毕竟不是教程贴ヽ(ー_ー)ノ github地址、文中代码不一定能直接执行，复制粘贴的。 下篇： 多图(多图操作挺麻烦的，对于某些图片效果不是很好) 下载(可能会出现动态百分比显示，挺好玩的233) 请求函数，加入重试机制]]></content>
