@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决pixiv登录机制添加Google V3验证]]></title>
+    <url>%2Fblog%2F2019%2F08%2F29%2Fpixiv-new-login%2F</url>
+    <content type="text"><![CDATA[说在前面的话 本篇概述：本文主要解决爬虫登录pixiv问题。8月份 pixiv 添加 recaptcha_v3(Google V3版本验证) 1、Google V3验证？ 何为 Google 验证码（reCAPTCHA v3）? reCAPTCHA v3 会以嵌入js的方式，给网站后台返回一个分数，这个分数是用于判断用户是否是机器人，分数的范围是0~1，分数约接近0，越像机器人； 2、使用之前文章中的代码模拟登录 Pixiv文章地址：Python爬虫-pixiv关注画师作品[1] 结果 json 数据格式化一下 ↓ 3、分析 我反复登录了几次，网页上并发现没有出现上图的 “I’m not a robot” 但是在登录抓包却看到 recaptcha_v3_token的值不为空，以前这个字段我记得是空的。 打开登录页面，f12打开调试工具–Network，点击XHR分页，可以看到每隔一段时间，通过 reload 重新请求一个 recaptcha_v3_token (稍微等待一下，一会儿就会看到第二个reload出来了) ↓ 登录的 from data，这个 recaptcha_v3_token ↓ 截个图，看看请求 recaptcha_v3_token 要 post 的字段 ↓ 4、解决方案1、手动抓包，在 headers 加入cookie 字段 图太长，手动省略 ↓ 2、selenium 抓取 （略） 个人比较喜欢用纯代码实现，虽然 selenium 也是要写代码。 3、selenium + requests (正文) [Warning]:该方法食用前，请先确保手动在 Chrome 上登录 pixiv selenium 自动保存 cookies requests 读取 cookies 并维持会话 Talk is cheap , Show me code 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263from selenium import webdriverimport osimport jsonimport requestsfrom requests.cookies import RequestsCookieJar# user data目录pro_dir = r'C:\Users\Hatsune Miku\AppData\Local\Google\Chrome\User Data'def get_cookie(): ''' 获取本地cookies ''' # 添加配置 chrome_options = webdriver.ChromeOptions() # 静默模式 chrome_options.add_argument('--headless') chrome_options.add_argument('--no-sandbox') chrome_options.add_argument('--start-maximized') # 添加user data目录 chrome_options.add_argument('user-data-dir='+os.path.abspath(pro_dir)) driver = webdriver.Chrome(chrome_options=chrome_options) # 访问后,获取cookies driver.get('https://www.pixiv.net/') cookies = driver.get_cookies() # 保存cookies with open("pixiv_cookies.txt", "w") as fp: json.dump(cookies, fp) driver.close()def read_cookie(): ''' 读取cookies ''' jar = RequestsCookieJar() with open("pixiv_cookies.txt", "r") as fp: cookies = json.load(fp) for cookie in cookies: jar.set(cookie['name'], cookie['value']) return jardef rep(jar): ''' 携带cookies对象并验证 ''' # 此为个人关注画师页面 url = 'https://www.pixiv.net/bookmark.php?type=user' headers = &#123; 'referer': 'https://accounts.pixiv.net/login', 'origin': 'https://accounts.pixiv.net', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) ' 'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'&#125; html = se.get(url,headers=headers,cookies=jar) return htmlif __name__ == '__main__': get_cookie() se = requests.session() # 定义session对象 jar = read_cookie() html = rep(jar) with open('bookmark.html','w+',encoding='utf8') as fp: fp.write(html.text) os.system('start bookmark.html') # 打开文件 结果展示 代码运行结束，会打开一个个人关注画师网页（selenium运行中的警报再想办法处理了） 可以将上面代码稍作修改，然后再封装成一个获取 cookies 对象的函数，后面直接携带这个 cookies 就行了 剩下的，想要拿收藏的插画√、关注的画师√、排行榜插画√ 都是可以的。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+        <tag>lxml</tag>
+        <tag>requests</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PythonDailyQuestion-0613]]></title>
     <url>%2Fblog%2F2019%2F06%2F15%2Fpythondailyquestion-0613%2F</url>
     <content type="text"><![CDATA[说在前面的话本篇概述：0612-每日一问 Tipsgithub：https://github.com/Elegant-Smile/PythonDailyQuestion 1、基础题 从标准输入读取两个整数并打印两行，其中第一行输出两个整数的整除结果；第二行输出两个整数的带小数的除法结果。 123456print('exp:12 24')nums = input('input tow nums:')a,b = nums.split(' ')print(int(a)//int(b))print('%.2f'%(int(a)/int(b))) 2、基础题 使用turtle库，绘制一个风轮效果，其中，每个风轮内角为45度，风轮边长150像素。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬提示：turtle.goto(x,y)函数，能够将turtle画笔移动到坐标(x,y) 3、提高题 列表中有一个数字出现的次数超过列表长度的一半，请找出这个数字。例如，输入一个长度为 9 的列表[1, 2, 3, 2, 2, 2, 5, 4, 2]。数字 2 出现了5次，超过列表长度的一半，因此输出2。如果不存在则输出0。 12345678910111213# 也可以自己指定数组,这里随机生成import randomlens = int(input('The len is :'))t = []for i in range(lens): t.append(random.choice(range(lens)))print('数组为',t)for i in list(set(t)): if t.count(i) &gt; lens//2: print(i)]]></content>
