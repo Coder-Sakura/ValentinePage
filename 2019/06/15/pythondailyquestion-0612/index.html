@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/blog/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-2.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-1.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python,每日一问,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="说在前面的话本篇概述：0612-每日一问">
+<meta name="keywords" content="python,每日一问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PythonDailyQuestion-0612">
+<meta property="og:url" content="https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/index.html">
+<meta property="og:site_name" content="Coder_桜">
+<meta property="og:description" content="说在前面的话本篇概述：0612-每日一问">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/HeadPicture.jpg">
+<meta property="og:updated_time" content="2019-06-14T17:42:51.168Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PythonDailyQuestion-0612">
+<meta name="twitter:description" content="说在前面的话本篇概述：0612-每日一问">
+<meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/HeadPicture.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'FUVUP77GD4',
+      apiKey: 'e75ae8bdf09cc112dc76f6e430ab93a3',
+      indexName: 'blog_for_sakura',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"查找你想要的~ ☆(〃'▽'〃)","hits_empty":"没有找到你想要找的 ${query} 这个东西~ (；へ：)","hits_stats":"用了${time}ms, 找到 ${hits} 条你感兴趣的哦~ ❤"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/">
+
+
+
+
+
+  <title>PythonDailyQuestion-0612 | Coder_桜</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ec6df6974d18087a38bc149ba0239d26";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<div id="player">
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
+    </div>
+	<style>
+        /*最外层容器样式*/
+        .wrap {
+            width: 50px;
+            height: 50px;
+            margin: 80px;
+            position: fixed;
+			top: 80px;
+			right: 60px;
+			z-index: 99999;
+        }
+ 
+        /*包裹所有容器样式*/
+        .cube {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-80deg);
+            animation: rotate linear 20s infinite;
+        }
+ 
+        @-webkit-keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+ 
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+            transition: all .4s;
+        }
+ 
+        /*定义所有图片样式*/
+        .pic {
+            width: 200px;
+            height: 200px;
+        }
+ 
+        .cube .out_front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+ 
+        .cube .out_back {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+ 
+        .cube .out_left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+ 
+        .cube .out_right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+ 
+        .cube .out_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+ 
+        .cube .out_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+ 
+        /*定义小正方体样式*/
+        .cube span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+ 
+        .cube .in_pic {
+            width: 100px;
+            height: 100px;
+        }
+ 
+        .cube .in_front {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+ 
+        .cube .in_back {
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+ 
+        .cube .in_left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+ 
+        .cube .in_right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+ 
+        .cube .in_top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+ 
+        .cube .in_bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+ 
+        /*鼠标移入后样式*/
+        .cube:hover .out_front {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+ 
+        .cube:hover .out_back {
+            transform: translateZ(-150px) rotateY(180deg);
+        }
+ 
+        .cube:hover .out_left {
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+ 
+        .cube:hover .out_right {
+            transform: rotateY(90deg) translateZ(150px);
+        }
+ 
+        .cube:hover .out_top {
+            transform: rotateX(90deg) translateZ(150px);
+        }
+ 
+        .cube:hover .out_bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+    </style>
+ <!-- 外层最大容器 -->
+    <div class="wrap">
+        <!--包裹所有元素的容器-->
+        <div class="cube">
+            <!--前面图片 -->
+            <div class="out_front">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPm5t.th.jpg" class="pic">
+            </div>
+            <!--后面图片 -->
+            <div class="out_back">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPkKe.th.png" class="pic">
+            </div>
+            <!--左面图片 -->
+            <div class="out_left">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPEbd.th.png" class="pic">
+            </div>
+            <!--右面图片 -->
+            <div class="out_right">
+                <img src="https://s2.ax1x.com/2019/09/17/nIP1Kg.th.png" class="pic">
+            </div>
+            <!--上面图片 -->
+            <div class="out_top">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPuPP.th.jpg" class="pic">
+            </div>
+            <!--下面图片 -->
+            <div class="out_bottom">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPK8f.th.jpg" class="pic">
+            </div>
+ 
+            <!--小正方体 -->
+            <span class="in_front">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPPgO.th.jpg" class="in_pic">
+            </span>
+            <span class="in_back">
+                 <img src="https://s2.ax1x.com/2019/09/17/nIPZVA.th.jpg" class="in_pic">
+            </span>
+            <span class="in_left">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPeUI.th.jpg" class="in_pic">
+            </span>
+            <span class="in_right">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPM28.th.jpg" class="in_pic">
+            </span>
+            <span class="in_top">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPQxS.th.jpg" class="in_pic">
+            </span>
+            <span class="in_bottom">
+                <img src="https://s2.ax1x.com/2019/09/17/nIPivD.th.png" class="in_pic">
+            </span>
+        </div>
+ 
+    </div>
+	
+	<header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Coder_桜</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Learning Python</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="https://coder-sakura.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-blog">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            blog
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-share">
+          <a href="/blog/share" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-share"></i> <br>
+            
+            资源分享
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://coder-sakura.github.io/blog/blog/2019/06/15/pythondailyquestion-0612/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Coder-Sakura">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/miku.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coder_桜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PythonDailyQuestion-0612</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-15T01:04:01+08:00">
+                2019-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/每日一问/" itemprop="url" rel="index">
+                    <span itemprop="name">每日一问</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog/2019/06/15/pythondailyquestion-0612/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog/2019/06/15/pythondailyquestion-0612/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/blog/2019/06/15/pythondailyquestion-0612/" class="leancloud_visitors" data-flag-title="PythonDailyQuestion-0612">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  456字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/blog/2019/06/15/pythondailyquestion-0612/HeadPicture.jpg">
+<hr>
+<blockquote>
+<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：0612-每日一问</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<blockquote>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>github：<a href="https://github.com/Elegant-Smile/PythonDailyQuestion" target="_blank" rel="noopener">https://github.com/Elegant-Smile/PythonDailyQuestion</a></p>
+</blockquote>
+<h2 id="1、概念题"><a href="#1、概念题" class="headerlink" title="1、概念题"></a>1、概念题</h2><blockquote>
+<p>请简述python中有哪些方式实现字符串格式化？</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello'</span></span><br><span class="line">b = <span class="string">'world'</span></span><br><span class="line">print(a,b)</span><br><span class="line">print(<span class="string">'%s %s'</span>%(a,b))</span><br><span class="line">print(<span class="string">'&#123;&#125; &#123;&#125;'</span>.format(a,b))</span><br></pre></td></tr></table></figure>
+<h2 id="2、基础题"><a href="#2、基础题" class="headerlink" title="2、基础题"></a>2、基础题</h2><blockquote>
+<p>温度的刻画有两个不同体系：摄氏度（Celsius）和华氏度（Fahrenheit）。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>请编写程序将用户输入华氏度转换为摄氏度，或将输入的摄氏度转换为华氏度。‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>转换算法如下：（C表示摄氏度、F表示华氏度）‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>         C = ( F - 32 ) / 1.8‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>         F = C * 1.8 + 32‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>要求如下：‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>(1) 输入输出的摄氏度可采用大小写字母C结尾，温度可以是整数或小数，如：12.34C指摄氏度12.34度；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>(2) 输入输出的华氏度可采用大小写字母F结尾，温度可以是整数或小数，如：87.65F指摄氏度87.65度；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>(3) 输出保留小数点后两位，输入格式错误时，输出提示：输入格式错误；‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬<br>(4) 使用input()获得测试用例输入时，不要增加提示字符串。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change</span><span class="params">(t)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> t[<span class="number">-1</span>].upper() == <span class="string">'C'</span>:</span><br><span class="line">        t = float(t[:<span class="number">-1</span>])*<span class="number">1.8</span>+<span class="number">32</span></span><br><span class="line">        print(<span class="string">'%.2fF'</span>%t)</span><br><span class="line">    <span class="keyword">elif</span> t[<span class="number">-1</span>].upper() == <span class="string">'F'</span>:</span><br><span class="line">        t = float(t[:<span class="number">-1</span>])<span class="number">-32</span>/<span class="number">1.8</span></span><br><span class="line">        print(<span class="string">'%.2fC'</span>%t)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'格式错误'</span>)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># print('Exp:12.34C、87.65F')</span></span><br><span class="line">    Temperature = input(<span class="string">'The Temperature is:'</span>)</span><br><span class="line">    change(Temperature)</span><br></pre></td></tr></table></figure>
+<h2 id="3、提高题"><a href="#3、提高题" class="headerlink" title="3、提高题"></a>3、提高题</h2><blockquote>
+<p>输入一个整数数组，实现一个函数来调整该数组中数字的顺序，<br>使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，<br>并保证奇数和奇数，偶数和偶数之间的相对位置不变。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'exp整数数组:123456'</span>)</span><br><span class="line">int_list = list(input(<span class="string">'Input The Integer Array:'</span>))</span><br><span class="line">even_list = [] <span class="comment"># 偶数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> int_list:</span><br><span class="line">    <span class="keyword">if</span> int(i)%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        int_list.remove(i)</span><br><span class="line">        even_list.append(i)</span><br><span class="line"></span><br><span class="line">int_list.extend(even_list)</span><br><span class="line">print(int_list)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+	<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-star"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+	</div>
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>PythonDailyQuestion-0612</p>
+  <p><span>文章作者:</span>Coder-Sakura</p>
+  <p><span>发布时间:</span>2019年06月15日 - 01:04:01</p>
+  <p><span>最后更新:</span>2019年06月15日 - 01:42:51</p>
+  <p><span>原始链接:</span><a href="/blog/2019/06/15/pythondailyquestion-0612/" title="PythonDailyQuestion-0612">https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/06/15/pythondailyquestion-0612/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+	</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/blog/tags/每日一问/" rel="tag"><i class="fa fa-tag"></i> 每日一问</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/06/14/pythondailyquestion-0611/" rel="next" title="PythonDailyQuestion-0611">
+                <i class="fa fa-chevron-left"></i> PythonDailyQuestion-0611
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/06/15/pythondailyquestion-0613/" rel="prev" title="PythonDailyQuestion-0613">
+                PythonDailyQuestion-0613 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+			<a href="/">
+              <img class="site-author-image" itemprop="image" src="/blog/uploads/miku.gif" alt="Coder-Sakura">
+			</a>
+            
+              <p class="site-author-name" itemprop="name">Coder-Sakura</p>
+              <p class="site-description motion-element" itemprop="description">Python 爬虫 技术 数据分析 博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Coder-Sakura/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1508015265&website=www.oicqzone.com" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://rj45mp.github.io/" title="某庄" target="_blank">某庄</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.asolmn.top/" title="Asolmn" target="_blank">Asolmn</a>
+                  </li>
+                
+              </ul>
+			<div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("02/09/2019 10:30:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="异世界存活时间:"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          <div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("02/09/2019 10:30:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="异世界存活时间:"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-text">Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、概念题"><span class="nav-text">1、概念题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、基础题"><span class="nav-text">2、基础题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、提高题"><span class="nav-text">3、提高题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+	  
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+	  
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Coder-Sakura</span>
+</div>
+
+<div class="copyright">
+	<span class="post-meta-divider">|</span>
+
+	<div class="theme-info">
+	<div class="powered-by"></div>
+	<span class="post-count">全站共14.8k字</span>
+	</div>
+
+	<span class="post-meta-divider">|</span>
+</div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() { 
+            var grt= new Date("02/09/2019 10:30:00");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "异世界存活时间： "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'EBgugbFwvfhRcpYtbqIK6PnA-gzGzoHsz',
+        appKey: 'jxKWEbAvYsVuuYRbxWe7uOco',
+        placeholder: '(=ﾟωﾟ)ﾉ把魔法箭射向我吧~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/blog/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/blog/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/blog/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("EBgugbFwvfhRcpYtbqIK6PnA-gzGzoHsz", "jxKWEbAvYsVuuYRbxWe7uOco");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+	<script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script>
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/blog/js/src/clicklove.js"></script>
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/blog/js/src/crash_cheat.js"></script>
