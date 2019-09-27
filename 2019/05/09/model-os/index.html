@@ -19,7 +19,7 @@
     
     
   <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/blog/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/blog/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -130,19 +130,19 @@
 
 
 
-<meta name="description" content="说在前面的话本篇概述：os模块常用方法汇总">
+<meta name="description" content="本篇概述：os模块常用方法汇总">
 <meta name="keywords" content="python,OS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python模块之OS">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/2019/05/09/model-os/index.html">
 <meta property="og:site_name" content="Coder_桜">
-<meta property="og:description" content="说在前面的话本篇概述：os模块常用方法汇总">
+<meta property="og:description" content="本篇概述：os模块常用方法汇总">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/05/09/model-os/HeadPicture.jpg">
-<meta property="og:updated_time" content="2019-06-14T16:13:23.350Z">
+<meta property="og:updated_time" content="2019-09-26T04:09:20.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python模块之OS">
-<meta name="twitter:description" content="说在前面的话本篇概述：os模块常用方法汇总">
+<meta name="twitter:description" content="本篇概述：os模块常用方法汇总">
 <meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/05/09/model-os/HeadPicture.jpg">
 
 
@@ -211,9 +211,13 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-	<div id="player">
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
-    </div>
+	<div class="tooltips">
+		<span>
+			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330  src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
+		</span>
+	</div>
+ <!-- 正方体样式 -->
 	<style>
         /*最外层容器样式*/
         .wrap {
@@ -672,7 +676,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  949字
+                  943字
                 </span>
               
 
@@ -709,12 +713,12 @@
       
 
       
-        <img src="/blog/2019/05/09/model-os/HeadPicture.jpg">
-<hr>
+        <hr>
 <blockquote>
-<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：os模块常用方法汇总</p>
+<p> 本篇概述：os模块常用方法汇总</p>
 </blockquote>
 <a id="more"></a>
+<img src="/blog/2019/05/09/model-os/HeadPicture.jpg">
 <hr>
 <h2 id="os模块——操作系统的接口"><a href="#os模块——操作系统的接口" class="headerlink" title="os模块——操作系统的接口"></a>os模块——操作系统的接口</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">dir(os)</span><br></pre></td></tr></table></figure>
 <h3 id="1、os-listdir-path-☆"><a href="#1、os-listdir-path-☆" class="headerlink" title="1、os.listdir(path)☆"></a>1、os.listdir(path)☆</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果path=None,则返回当前目录下的文件夹和文件名字的列表;否则返回指定path的件夹和文件名字的列表</span></span><br><span class="line">os.listdir()</span><br><span class="line">os.listdir(path)</span><br></pre></td></tr></table></figure>
@@ -766,7 +770,7 @@
   <p><span>本文标题:</span>Python模块之OS</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年05月09日 - 05:45:42</p>
-  <p><span>最后更新:</span>2019年06月15日 - 00:13:23</p>
+  <p><span>最后更新:</span>2019年09月26日 - 12:09:20</p>
   <p><span>原始链接:</span><a href="/blog/2019/05/09/model-os/" title="Python模块之OS">https://coder-sakura.github.io/blog/2019/05/09/model-os/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/05/09/model-os/" aria-label="复制成功！"></i></span>
   </p>
@@ -910,7 +914,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -932,7 +936,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1008,6 +1012,7 @@ return i;
 show_date_time();
 </script>
 
+
             </div>
           
 
@@ -1038,6 +1043,7 @@ return i;
 show_date_time();
 </script>
 
+
         </div>
       </section>
 
@@ -1051,7 +1057,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os模块——操作系统的接口"><span class="nav-text">os模块——操作系统的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、os-listdir-path-☆"><span class="nav-text">1、os.listdir(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、os-chdir-path-☆"><span class="nav-text">2、os.chdir(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、os-getcwd-☆"><span class="nav-text">3、os.getcwd()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、os-path-join-☆"><span class="nav-text">4、os.path.join()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、os-path-exists-path-☆"><span class="nav-text">5、os.path.exists(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、os-path-abspath-path-☆"><span class="nav-text">6、os.path.abspath(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、os-path-split-path-☆"><span class="nav-text">7、os.path.split(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、os-path-dirname-path-☆"><span class="nav-text">8、os.path.dirname(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、os-path-basename-path-☆"><span class="nav-text">9、os.path.basename(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、os-path-getmtime-path"><span class="nav-text">10、os.path.getmtime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、os-path-getatime-path"><span class="nav-text">11、os.path.getatime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、os-path-getacime-path"><span class="nav-text">12、os.path.getacime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、os-path-getsize-path-☆"><span class="nav-text">13、os.path.getsize(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、os-makedirs-☆"><span class="nav-text">14、os.makedirs()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、os-system"><span class="nav-text">15、os.system()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、os-popen"><span class="nav-text">16、os.popen()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、os-remove-path-☆"><span class="nav-text">17、os.remove(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、os-rename-src-dst"><span class="nav-text">18、os.rename(src,dst)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、os-getenv"><span class="nav-text">19、os.getenv()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、os-walk"><span class="nav-text">20、os.walk()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#os模块——操作系统的接口"><span class="nav-text">os模块——操作系统的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、os-listdir-path-☆"><span class="nav-text">1、os.listdir(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、os-chdir-path-☆"><span class="nav-text">2、os.chdir(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、os-getcwd-☆"><span class="nav-text">3、os.getcwd()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、os-path-join-☆"><span class="nav-text">4、os.path.join()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、os-path-exists-path-☆"><span class="nav-text">5、os.path.exists(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、os-path-abspath-path-☆"><span class="nav-text">6、os.path.abspath(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、os-path-split-path-☆"><span class="nav-text">7、os.path.split(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、os-path-dirname-path-☆"><span class="nav-text">8、os.path.dirname(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、os-path-basename-path-☆"><span class="nav-text">9、os.path.basename(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、os-path-getmtime-path"><span class="nav-text">10、os.path.getmtime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、os-path-getatime-path"><span class="nav-text">11、os.path.getatime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、os-path-getacime-path"><span class="nav-text">12、os.path.getacime(path)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、os-path-getsize-path-☆"><span class="nav-text">13、os.path.getsize(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、os-makedirs-☆"><span class="nav-text">14、os.makedirs()☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、os-system"><span class="nav-text">15、os.system()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、os-popen"><span class="nav-text">16、os.popen()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、os-remove-path-☆"><span class="nav-text">17、os.remove(path)☆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、os-rename-src-dst"><span class="nav-text">18、os.rename(src,dst)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、os-getenv"><span class="nav-text">19、os.getenv()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、os-walk"><span class="nav-text">20、os.walk()</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1092,7 +1098,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共14.8k字</span>
+	<span class="post-count">全站共14.9k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -1442,10 +1448,12 @@ show_date_time();
 
   
 
-  <div class="bg_content">
-  <canvas id="canvas"></canvas>
-</div>
-	<script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script>
+  <!-- 背景js -->
+  <!-- <div class="bg_content"> -->
+  <!-- <canvas id="canvas"></canvas> -->
+  <!-- </div> -->
+  <!-- <script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script> -->
+  <!-- 背景js -->
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->

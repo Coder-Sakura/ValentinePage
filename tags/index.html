@@ -19,7 +19,7 @@
     
     
   <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/blog/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/blog/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -208,9 +208,13 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-	<div id="player">
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
-    </div>
+	<div class="tooltips">
+		<span>
+			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330  src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
+		</span>
+	</div>
+ <!-- 正方体样式 -->
 	<style>
         /*最外层容器样式*/
         .wrap {
@@ -566,10 +570,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 12 个标签
+                目前共计 13 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/blog/tags/OS/" style="font-size: 15.6px; color: #a7a7a7">OS</a> <a href="/blog/tags/Others/" style="font-size: 12px; color: #ccc">Others</a> <a href="/blog/tags/Xpath/" style="font-size: 12px; color: #ccc">Xpath</a> <a href="/blog/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/blog/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/blog/tags/lxml/" style="font-size: 19.2px; color: #818181">lxml</a> <a href="/blog/tags/mysql/" style="font-size: 12px; color: #ccc">mysql</a> <a href="/blog/tags/python/" style="font-size: 30px; color: #111">python</a> <a href="/blog/tags/requests/" style="font-size: 19.2px; color: #818181">requests</a> <a href="/blog/tags/tkinter/" style="font-size: 12px; color: #ccc">tkinter</a> <a href="/blog/tags/每日一问/" style="font-size: 26.4px; color: #363636">每日一问</a> <a href="/blog/tags/爬虫/" style="font-size: 22.8px; color: #5c5c5c">爬虫</a>
+              <a href="/blog/tags/OS/" style="font-size: 15.6px; color: #a7a7a7">OS</a> <a href="/blog/tags/Others/" style="font-size: 12px; color: #ccc">Others</a> <a href="/blog/tags/Xpath/" style="font-size: 12px; color: #ccc">Xpath</a> <a href="/blog/tags/csv/" style="font-size: 12px; color: #ccc">csv</a> <a href="/blog/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/blog/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/blog/tags/lxml/" style="font-size: 19.2px; color: #818181">lxml</a> <a href="/blog/tags/mysql/" style="font-size: 12px; color: #ccc">mysql</a> <a href="/blog/tags/python/" style="font-size: 30px; color: #111">python</a> <a href="/blog/tags/requests/" style="font-size: 19.2px; color: #818181">requests</a> <a href="/blog/tags/tkinter/" style="font-size: 12px; color: #ccc">tkinter</a> <a href="/blog/tags/每日一问/" style="font-size: 26.4px; color: #363636">每日一问</a> <a href="/blog/tags/爬虫/" style="font-size: 22.8px; color: #5c5c5c">爬虫</a>
             </div>
           </div>
         
@@ -629,7 +633,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -651,7 +655,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -727,6 +731,7 @@ return i;
 show_date_time();
 </script>
 
+
             </div>
           
 
@@ -756,6 +761,7 @@ return i;
 }
 show_date_time();
 </script>
+
 
         </div>
       </section>
@@ -795,7 +801,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共14.8k字</span>
+	<span class="post-count">全站共14.9k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -1145,10 +1151,12 @@ show_date_time();
 
   
 
-  <div class="bg_content">
-  <canvas id="canvas"></canvas>
-</div>
-	<script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script>
+  <!-- 背景js -->
+  <!-- <div class="bg_content"> -->
+  <!-- <canvas id="canvas"></canvas> -->
+  <!-- </div> -->
+  <!-- <script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script> -->
+  <!-- 背景js -->
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->

@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f796ff;
+  background: #a81829;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3454,14 +3454,45 @@ pre .deletion {
 .posts-collapse .post-header:hover::before {
   background-color: #000;
 }
-#player {
+.tooltips {
+  webkit-animation: A 3s linear 0s infinite;
+  animation: A 3s linear 0s infinite;
+  width: 80px;
+  height: 80px;
+  top: 12px;
+  left: 12px;
+  background: url("/blog/images/background/rot.png");
+  background-attachment: scroll;
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  height: 300px;
-  z-index: 9999;
-  opacity: 0.7;
+/*这个是关键*/
+  z-index: 102;
+}
+.tooltips:hover {
+  -webkit-animation: none;
+  animation: none;
+  z-index: 103;
+  background: none;
+/*没有这个在IE中不可用*/
+}
+.tooltips span {
+  display: none;
+}
+.tooltips:hover span {
+/*span 标签仅在 :hover 状态时显示*/
+  display: block;
+  position: relative;
+  width: 330px;
+  height: 430px;
+}
+@-webkit-keyframes A {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 .menu {
   text-align: center;
@@ -3647,6 +3678,70 @@ hr {
 }
 .with-love {
   color: #ff71a8;
+}
+@-moz-keyframes A {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes A {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes A {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes A {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {

@@ -19,7 +19,7 @@
     
     
   <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/blog/lib/pace/.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/blog/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-<meta name="description" content="说在前面的话本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
+<meta name="description" content="本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
 <meta name="keywords" content="python,爬虫,lxml,requests">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python爬虫-pixiv关注画师作品[2]">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/index.html">
 <meta property="og:site_name" content="Coder_桜">
-<meta property="og:description" content="说在前面的话本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
+<meta property="og:description" content="本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/HeadPicture.jpg">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/1.png">
@@ -150,10 +150,10 @@
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/9.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/10.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/11.png">
-<meta property="og:updated_time" content="2019-06-11T19:46:26.923Z">
+<meta property="og:updated_time" content="2019-09-26T04:09:10.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬虫-pixiv关注画师作品[2]">
-<meta name="twitter:description" content="说在前面的话本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
+<meta name="twitter:description" content="本篇概述：上篇的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息">
 <meta name="twitter:image" content="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/HeadPicture.jpg">
 
 
@@ -222,9 +222,13 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-	<div id="player">
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
-    </div>
+	<div class="tooltips">
+		<span>
+			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330  src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
+		</span>
+	</div>
+ <!-- 正方体样式 -->
 	<style>
         /*最外层容器样式*/
         .wrap {
@@ -720,12 +724,12 @@
       
 
       
-        <img src="/blog/2019/03/30/pixiv-two/HeadPicture.jpg">
-<hr>
+        <hr>
 <blockquote>
-<h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><p>本篇概述：<a href="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/">上篇</a>的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息</p>
+<p>本篇概述：<a href="https://coder-sakura.github.io/blog/2019/03/27/pixiv-one/">上篇</a>的后续；主要是分析数据接口，拿到关注画师的所有作品的详细信息</p>
 </blockquote>
 <a id="more"></a>
+<img src="/blog/2019/03/30/pixiv-two/HeadPicture.jpg">
 <hr>
 <h2 id="1、分析——关注界面"><a href="#1、分析——关注界面" class="headerlink" title="1、分析——关注界面"></a>1、分析——关注界面</h2><blockquote>
 <p>关注界面(默认公开) <a href="https://www.pixiv.net/bookmark.php?type=user&amp;rest=show" target="_blank" rel="noopener">https://www.pixiv.net/bookmark.php?type=user&amp;rest=show</a> </p>
@@ -856,7 +860,7 @@
   <p><span>本文标题:</span>Python爬虫-pixiv关注画师作品[2]</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月30日 - 18:15:28</p>
-  <p><span>最后更新:</span>2019年06月12日 - 03:46:26</p>
+  <p><span>最后更新:</span>2019年09月26日 - 12:09:10</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/30/pixiv-two/" title="Python爬虫-pixiv关注画师作品[2]">https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/30/pixiv-two/" aria-label="复制成功！"></i></span>
   </p>
@@ -1004,7 +1008,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1026,7 +1030,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1102,6 +1106,7 @@ return i;
 show_date_time();
 </script>
 
+
             </div>
           
 
@@ -1132,6 +1137,7 @@ return i;
 show_date_time();
 </script>
 
+
         </div>
       </section>
 
@@ -1145,7 +1151,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面的话"><span class="nav-text">说在前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、分析——关注界面"><span class="nav-text">1、分析——关注界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、代码——bs4匹配"><span class="nav-text">2、代码——bs4匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、代码——获取关注画师的信息"><span class="nav-text">3、代码——获取关注画师的信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、分析——画师个人主页及数据流向"><span class="nav-text">4、分析——画师个人主页及数据流向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、模仿请求"><span class="nav-text">5、模仿请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、代码——获取关注画师的所有作品信息"><span class="nav-text">6、代码——获取关注画师的所有作品信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、最后"><span class="nav-text">7、最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、分析——关注界面"><span class="nav-text">1、分析——关注界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、代码——bs4匹配"><span class="nav-text">2、代码——bs4匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、代码——获取关注画师的信息"><span class="nav-text">3、代码——获取关注画师的信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、分析——画师个人主页及数据流向"><span class="nav-text">4、分析——画师个人主页及数据流向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、模仿请求"><span class="nav-text">5、模仿请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、代码——获取关注画师的所有作品信息"><span class="nav-text">6、代码——获取关注画师的所有作品信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、最后"><span class="nav-text">7、最后</span></a></li></ol></div>
             
 
           </div>
@@ -1186,7 +1192,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共14.8k字</span>
+	<span class="post-count">全站共14.9k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -1536,10 +1542,12 @@ show_date_time();
 
   
 
-  <div class="bg_content">
-  <canvas id="canvas"></canvas>
-</div>
-	<script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script>
+  <!-- 背景js -->
+  <!-- <div class="bg_content"> -->
+  <!-- <canvas id="canvas"></canvas> -->
+  <!-- </div> -->
+  <!-- <script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script> -->
+  <!-- 背景js -->
 <script src="/blog/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
