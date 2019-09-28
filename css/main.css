@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7eb84f;
+  background: #ff4f9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3488,13 +3488,8 @@ pre .deletion {
 .tooltips:hover .player {
 /*span 标签仅在 :hover 状态时显示*/
   display: block;
-  position: absolute;
+  position: relative;
   z-index: 904;
-  width: 300px;
-  height: 400px;
-}
-.tooltips:hover .player iframe {
-/*span 标签仅在 :hover 状态时显示*/
   width: 300px !important;
   height: 400px !important;
 }
