@@ -213,11 +213,11 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<div class="tooltips">
-		<span>
-			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330  src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe> -->
-			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="https://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
-		</span>
+		<div class="player">
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="http://music.163.com/outchain/player?type=0&id=2626786567&auto=0&height=430"></iframe>
+		</div>
 	</div>
+
  <!-- 正方体样式 -->
 	<style>
         /*最外层容器样式*/
@@ -997,7 +997,7 @@ hrsold=setzero(Math.floor(e_hrsold));
 e_minsold=(e_hrsold-hrsold)*60;
 minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
 seconds=setzero(Math.floor((e_minsold-minsold)*60));
-document.getElementById('days').innerHTML="异世界存活时间:"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+document.getElementById('days').innerHTML="异世界存活时间："+"<br/>"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
 }
 function setzero(i){
 if (i<10)
@@ -1028,7 +1028,7 @@ hrsold=setzero(Math.floor(e_hrsold));
 e_minsold=(e_hrsold-hrsold)*60;
 minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
 seconds=setzero(Math.floor((e_minsold-minsold)*60));
-document.getElementById('days').innerHTML="异世界存活时间:"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+document.getElementById('days').innerHTML="异世界存活时间："+"<br/>"+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
 }
 function setzero(i){
 if (i<10)
@@ -1449,7 +1449,7 @@ show_date_time();
   <!-- </div> -->
   <!-- <script type="text/javascript" src="/blog/js/src/dynamic_bg.js"></script> -->
   <!-- 背景js -->
-<script src="/blog/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/blog/js/src/clicklove.js"></script>

@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c6ffc6;
+  background: #7eb84f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3365,17 +3365,24 @@ pre .javascript .function {
   }
 }
 .post {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
   background-image: url("/blog/images/background/background.jpg");
   background-attachment: fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
+  -webkit-animation: Scroll_background 40s linear infinite;
+}
+@-webkit-keyframes Scroll_background {
+  from {
+    background-position: 1662px 100%;
+  }
+  to {
+    background-position: 0 100%;
+  }
 }
 code {
   color: #ff7600;
@@ -3462,29 +3469,34 @@ pre .deletion {
   top: 12px;
   left: 12px;
   background: url("/blog/images/background/rot.png");
-  background-attachment: scroll;
   background-size: 100%;
   background-repeat: no-repeat;
-  position: fixed;
+  position: absolute;
 /*这个是关键*/
-  z-index: 102;
+  z-index: 902;
 }
 .tooltips:hover {
   -webkit-animation: none;
   animation: none;
-  z-index: 103;
+  z-index: 903;
   background: none;
 /*没有这个在IE中不可用*/
 }
-.tooltips span {
+.tooltips .player {
   display: none;
 }
-.tooltips:hover span {
+.tooltips:hover .player {
 /*span 标签仅在 :hover 状态时显示*/
   display: block;
-  position: relative;
-  width: 330px;
-  height: 430px;
+  position: absolute;
+  z-index: 904;
+  width: 300px;
+  height: 400px;
+}
+.tooltips:hover .player iframe {
+/*span 标签仅在 :hover 状态时显示*/
+  width: 300px !important;
+  height: 400px !important;
 }
 @-webkit-keyframes A {
   0% {
@@ -3501,10 +3513,12 @@ pre .deletion {
   padding: 5px;
   background-color: rgba(0,191,255,0.65);
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
+  border-radius: 10px;
 }
 .sidebar {
   box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
   background-color: rgba(0,191,255,0.75);
+  border-radius: 10px;
 }
 .sidebar-inner {
   margin-top: 30px;
@@ -3516,6 +3530,16 @@ pre .deletion {
 .site-state-item {
   padding: 0px 15px;
   border-left: 1.5px solid #191970;
+}
+.site-state-item-name {
+  font-size: 13px;
+  color: #000;
+}
+.site-description {
+  margin-top: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #000;
 }
 #days {
   display: block;
@@ -3558,7 +3582,7 @@ pre .deletion {
 .pagination .page-number.current {
   border-radius: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  background-color: rgba(255,255,255,0.35);
+  background-color: rgba(52,73,94,0.35);
 }
 .pagination .prev,
 .pagination .next,
@@ -3644,6 +3668,7 @@ hr {
 }
 .post-button {
   margin-top: 0px;
+  opacity: 1;
 }
 .bg_content {
   position: fixed;
