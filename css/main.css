@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff629;
+  background: #adc4d2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3461,6 +3461,23 @@ pre .deletion {
 .posts-collapse .post-header:hover::before {
   background-color: #000;
 }
+.hitokoto {
+  font: 25px mFont;
+  color: #fff;
+  text-shadow: -2px 0 5px rgba(204,204,204,0.02);
+  text-align: center;
+  margin-top: 20px;
+  background-image: linear-gradient(to bottom, rgba(255,118,0,0.741), #f9f9f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@font-face {
+  font-family: mFont;
+  src: url("/blog/uploads/custom.ttf");
+}
+.posts-expand {
+  padding-top: 0px;
+}
 .tooltips {
   webkit-animation: A 3s linear 0s infinite;
   animation: A 3s linear 0s infinite;
@@ -3654,9 +3671,6 @@ hr {
 .header-inner {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-.posts-expand {
-  padding-top: 10px;
 }
 .posts-expand .post-meta {
   margin: 5px 0px 0px 0px;
