@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[1024小关卡]]></title>
+    <url>%2Fblog%2F2019%2F10%2F24%2F1024%2F</url>
+    <content type="text"><![CDATA[本篇概述：菜鸟教程公众号在1024当天所发的一个 ” 程序员节闯关瓜分 1024 红包 “ 的活动。 1、文章页面展示点击 2、逐个击破1、打开网站 www.runoob.com 查找第一个字母 —— i ctrl + U 打开源码没发现什么，也没什么明确提示 F12 打开调试工具，很明显看见个关键字 / console 页签也有打印 2、第二个字母 md5 加密 —— l123456import stringimport hashlibfor i in string.ascii_letters: res = hashlib.md5(i.encode()).hexdigest() if res == '2db95e8e1a9267b7a1188556b2013b33': print(i) 3、第三个字母对应的ASCII为111 —— o123# chr() 查看ascii码对应的字符 # chr(65) Achr(111) 4、第四个字母在二维码中 —— v 扫描即可，v 盲猜，ilov erunoob，都是套路 5、第五个字母 —— e RGB(238,238,238) RGB颜色代码转十六进制 ——&gt; 结果：#EEEEEE 网站: RGB颜色值与十六进制颜色码转换工具 6、第6-8个字母是个单词，图片的数字为二进制 —— r u n 01110010 01110101 01101110 123456789101112int('01110010',2)int('01110101',2)int('01101110',2)# 114 117 110# ascii码# 用chr()转换下chr(114)chr(117)chr(110)# r u n 7、第七个—— oo图片里的是一段js代码，还有正则。 reg 的意思是： (\w)，匹配字母及下划线并分到一个捕获组里； \1，是向后引用第二个捕获组并匹配和分到一个捕获组。( \0是第一个，也就是正则表达式 ) 这段正则就是捕获字母或下划线重复的部分 1234567import reh = 'abcdefghijklmnoopqrstuvwxyz'r = r'(\w)(\1)'# js代码里的正则/g不知道啥意思p = re.compile(r)m = re.findall(p,h) 结果，m = [(‘o’, ‘o’)] 8、第八个字母 —— b Yg== 等于号结尾，很明显是base家族编码 1234import base64print(base64.b64decode(b'Yg=='))# base32解码就是将b64decode变成b32decode,base16同理. 3、请求 以上得到是：iloverunoob； 拼接 http://test.runoob.com/runoob1024.php?key=iloverunoob]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>其他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python操作csv文件]]></title>
     <url>%2Fblog%2F2019%2F09%2F26%2Fcsv%2F</url>
     <content type="text"><![CDATA[本篇概述：csv文档操作及部分函数示例 1、简介 CSV 模块是python内置的标准库 1import csv # 引入方式 CSV格式的文件是电子表格和数据库最常见的输入输出文件格式，对了多种来源的CSV文件，编写一个统一的CSV模块来统一处理是极为有效率的。 2、函数介绍1.csv.reader() 读取 csvfile : 必须是可迭代对象，或者是文件 dialect：编码风格，默认是 excel 风格；需要指定其他风格可查看csv.list_dialects() 12print(csv.list_dialects())# ['excel', 'excel-tab', 'unix'] fmtparams：格式化参数，用于覆盖 dialect 指定的风格 12345678import csvwith open('t.csv','r') as f: ls = csv.reader(f,dialect='excel') # 默认是excel for l in ls:print(l)# ['标题1', '标题2', '标题3', '标题4']# ['1', '2', '3', '4']# ['1', '1'] 2.csv.writer() 写入 同csv.reader() 12345678import csv# w是写入,存在则覆盖,慎用# 这里为了举例使用with open('t.csv','w') as f: w = csv.writer(f) w.writerow([0,1]) w.writerows([['John',18],['Joe',19]]) writerow 单行写入 writerows 多行写入 但是以上代码执行后存在一个问题：每次写入数据都会换行再写入 解决： 1234567import csv# w是写入,存在则覆盖,慎用with open('t.csv','w',newline='') as f: w = csv.writer(f) w.writerow([0,1]) w.writerows([['John',18],['Joe',19]]) 结果： 分析： newline 参数是控制文本模式下( 即w、w+、a、a+等) 一行文本结束的字符，可以是None，\n，\t等 3.csv.list_dialects() 查看所有支持的编码风格，包括用户自定义的 123import csvprint(csv.list_dialects())# ['excel', 'excel-tab', 'unix'] 4.csv.register_dialect(name, [dialect, ]**fmtparams) 创建自定义的 dialect name：自定义的 dialect 名字 其余的是dialect格式参数，包括：delimiter（分隔符，默认的就是逗号）、quotechar、quoting等 12345678# 创建一个test1的dialect，分隔符用"|"csv.register_dialect('test1',delimiter='|')# 引用with open('t.csv','r') as f: ls = csv.reader(f,'test1') pass 5.csv.unregister_dialect() name：dialect的名字 12345678910import csvprint(csv.list_dialects())['excel', 'excel-tab', 'unix']csv.register_dialect('test1',delimiter='|')print(csv.list_dialects())['excel', 'excel-tab', 'unix', 'test1']csv.unregister_dialect('test1')print(csv.list_dialects())['excel', 'excel-tab', 'unix'] 6.csv.DictWriter() 以字典形式写入 csvfile：必须是可迭代对象，或者是文件 fieldnames：字段名 123456789import csvwith open('t.csv','w',newline='') as f: fileheader = ['name','age'] w = csv.DictWriter(f,fileheader) w.writeheader() data = [['Ame',18],['Jack',22],['Bob',26]] for d in data: w.writerow(&#123;'name':d[0],'age':d[1]&#125;) 结果：]]></content>

@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #adc4d2;
+  background: #ff6b57;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3405,10 +3405,12 @@ pre {
   cursor: pointer;
 }
 .close:after {
-  content: "▼";
+  content: "收起 ▼ ٩(๑>◡<๑)۶";
+  position: absolute;
 }
 .open:after {
-  content: "▲";
+  content: "展开 ▲ (>▽<)";
+  position: absolute;
 }
 code {
   margin: 0px 4px;
