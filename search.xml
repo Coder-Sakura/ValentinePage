@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MyBOokShelf-python]]></title>
+    <url>%2Fblog%2F2019%2F11%2F12%2Fmybookshelf-python%2F</url>
+    <content type="text"><![CDATA[本篇概述：用python自定义阅读酷1000+书源并导出生成短链接 1、123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176import requestsimport timeimport refrom lxml import etree# 收藏post_url = 'http://ku.iszoc.com/index/sign.html'# 导出收藏为json文件的apiexport_url = 'http://ku.iszoc.com/user/Favorites/export.html'# 阅读酷书源最大页数search_url = "http://ku.iszoc.com/index/search.html"# 阅读酷书源收藏书源最大页数fa_index_url = "http://ku.iszoc.com/user/favorites/index.html"# 删除收藏的apidel_url = "http://ku.iszoc.com/user/Favorites/selectDel.html"# 请求头headers = &#123; "Cookie":"PHPSESSID=c3a21362dc3036a515db860e095a1ca4; Hm_lvt_ea5e026ac2ed0205ce7a6417bbd1dcef=1571831331,1572157850,1572790358,1573480142; Hm_lpvt_ea5e026ac2ed0205ce7a6417bbd1dcef=1573481354", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3641.400 QQBrowser/10.4.3284.400"&#125;def max(url): ''' 获取最大书源页数 ''' html = req_page_html(url=url) obj = etree.HTML(html) num = obj.xpath(".//ul[@class='pagination']//li/a/text()")[-3] return int(num)def req_page_html(url,num=3): ''' 封装函数以请求每一页书源网址(一页15个),返回resp.text ''' try: resp = requests.post(url,headers=headers,timeout=10).text except Exception as e: if num &gt; 0: # 重试3次 return req_page_html(url,num=num-1) else: print(url) print(e) return respdef req(post_id,num=3): ''' 封装请求函数以收藏书源 ''' data = &#123; "type":"yes", "id":post_id &#125; try: resp = requests.post(post_url,headers=headers,data=data,timeout=10).text except Exception as e: if num &gt; 0: # 重试3次 return req(post_id,num=num-1) else: print(post_id) print(e) return respdef parse_div(i,div): ''' 提取信息,主要是拿到收藏状态,其他写着玩,如需不要请注释 ''' r = re.compile("[ &amp;nbsp\r\n ]") # 过滤的正则表达式 # 每个书源div下的5个span,有些有6个 span_list = div.xpath("./div[@class='layui-card-body']/span") # ================ ↓ 可注释 ↓ ================================== # 点击量 dianji_count = span_list[0].xpath("./span/text()")[0] dianji_count = re.sub(r,'',dianji_count).replace(" ","") # 评论量 comment_count = span_list[1].xpath("./span/text()")[0] comment_count = re.sub(r,'',comment_count) # 更新时间 update_time = span_list[3].xpath("./span/text()")[0] update_time = re.sub(r,'',update_time) update_time = update_time[:10] + ' ' +update_time[10:] # 作者 author = span_list[4].xpath("./span/text()")[0] author = re.sub(r,"",author) # 以下属性可能部分div没有 # 带发现 try: search = span_list[5].xpath("./span/text()")[0] except: search = "无带发现" search = re.sub(r,"",search) # 音频源 try: audio = span_list[5].xpath("./span/text()")[0] except: audio = "无音频源" audio = re.sub(r,"",audio) # ================ ↑ 可注释 ↑ ================================== # 收藏状态 bookmark = span_list[2].xpath("./span/text()")[0] bookmark = re.sub(r,"",bookmark) # 如注释收藏状态以外的部分,请使用下面该行 # return bookmark return [dianji_count,comment_count,bookmark,update_time,author,search,audio],bookmarkdef work(): for i in range(1,max(search_url)+1): url = 'http://ku.iszoc.com/index/search.html?page=&#123;&#125;'.format(i) resp = req_page_html(url) etree_obj = etree.HTML(resp) div_list = etree_obj.xpath("//div[@class='layui-card-body']/div")[1:] # 第一个是公告 for div in div_list: # 每个书源的id post_id = div.xpath("./a/@href")[0].split('.')[0].split('/')[-1] mes_list,bookmark = parse_div(i,div) # print(post_id,bookmark) if bookmark == '未收藏': resp = req(post_id) if '收藏成功' in resp: print(i,post_id,'收藏成功') else: print(resp) print(i,post_id,'error') elif bookmark == '已收藏': print(i,post_id,'已收藏') time.sleep(0.5) # break time.sleep(5) # print('\n')def export(): ''' 获取收藏内的书源的value_id,并将所有id拼接起来 ''' value_id = '' for i in range(1,max(fa_index_url)+1): fa_url = 'http://ku.iszoc.com/user/favorites/index.html?page=&#123;&#125;'.format(i) resp = req_page_html(fa_url) etree_obj = etree.HTML(resp) id_list = etree_obj.xpath("//input[@name='key[]']/@value") for _id in id_list: value_id += _id value_id += ',' # print(value_id) time.sleep(0.5) # break with open('1008_values_id_list.txt','w') as f: f.write(value_id) data = &#123; 'id':value_id &#125; # 批量删除所有收藏书源 # resp = requests.post(del_url,headers=headers,data=data,timeout=10).text # 批量导出所有收藏书源 resp = requests.post(export_url,headers=headers,data=data,timeout=10).text print(resp)if __name__ == '__main__': ''' 1、使用前清获取自己的cookie填入headers中的cookies字段中 2、如需删除所有收藏的书源,将下面三行注释 再将export()方法中post的url由export_url改为del_url即可 ''' print("="*30,"开始收藏","="*30) work() # 全部收藏 print("="*30,"收藏完成","="*30) print("="*30,"开始获取书源地址","="*30) export() # 拿到所以value id生成json print("="*30,"获取完成","="*30) 2、3、]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>MyBOokShelf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MyBookShelf/阅读]]></title>
+    <url>%2Fblog%2F2019%2F10%2F27%2Fmybookshelf%2F</url>
+    <content type="text"><![CDATA[本篇概述：分享一款可以读书软件(阅读/MyBookShelf)。无广告，可自定义书源，界面简洁，专注阅读，没有多余的社交等功能，专为管理书籍而生。 1、概述MyBookShelf / 阅读 专注于管理书籍，并能用网络中自定义来源以获取书籍内容，开源简洁，支持Web服务管理书架。大小10M左右，麻雀虽小五脏俱全。 地址 Github地址：https://github.com/gedoor/MyBookshelf 官网：https://gedoor.github.io/MyBookshelf/ 书源分享平台：http://ku.iszoc.com/ 页面展示界面简洁，专注阅读。书源丰富，功能齐全，自定义书源，自定义排版( 图片来源官网/github)]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>软件分享</tag>
+        <tag>Others</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[1024小关卡]]></title>
     <url>%2Fblog%2F2019%2F10%2F24%2F1024%2F</url>
     <content type="text"><![CDATA[本篇概述：菜鸟教程公众号在1024当天所发的一个 ” 程序员节闯关瓜分 1024 红包 “ 的活动。 1、文章页面展示点击 2、逐个击破1、打开网站 www.runoob.com 查找第一个字母 —— i ctrl + U 打开源码没发现什么，也没什么明确提示 F12 打开调试工具，很明显看见个关键字 / console 页签也有打印 2、第二个字母 md5 加密 —— l123456import stringimport hashlibfor i in string.ascii_letters: res = hashlib.md5(i.encode()).hexdigest() if res == '2db95e8e1a9267b7a1188556b2013b33': print(i) 3、第三个字母对应的ASCII为111 —— o123# chr() 查看ascii码对应的字符 # chr(65) Achr(111) 4、第四个字母在二维码中 —— v 扫描即可，v 盲猜，ilov erunoob，都是套路 5、第五个字母 —— e RGB(238,238,238) RGB颜色代码转十六进制 ——&gt; 结果：#EEEEEE 网站: RGB颜色值与十六进制颜色码转换工具 6、第6-8个字母是个单词，图片的数字为二进制 —— r u n 01110010 01110101 01101110 123456789101112int('01110010',2)int('01110101',2)int('01101110',2)# 114 117 110# ascii码# 用chr()转换下chr(114)chr(117)chr(110)# r u n 7、第七个—— oo图片里的是一段js代码，还有正则。 reg 的意思是： (\w)，匹配字母及下划线并分到一个捕获组里； \1，是向后引用第二个捕获组并匹配和分到一个捕获组。( \0是第一个，也就是正则表达式 ) 这段正则就是捕获字母或下划线重复的部分 1234567import reh = 'abcdefghijklmnoopqrstuvwxyz'r = r'(\w)(\1)'# js代码里的正则/g不知道啥意思p = re.compile(r)m = re.findall(p,h) 结果，m = [(‘o’, ‘o’)] 8、第八个字母 —— b Yg== 等于号结尾，很明显是base家族编码 1234import base64print(base64.b64decode(b'Yg=='))# base32解码就是将b64decode变成b32decode,base16同理. 3、请求 以上得到是：iloverunoob； 拼接 http://test.runoob.com/runoob1024.php?key=iloverunoob]]></content>
@@ -36,6 +60,8 @@
         <tag>爬虫</tag>
         <tag>lxml</tag>
         <tag>requests</tag>
+        <tag>pixiv</tag>
+        <tag>selenium</tag>
       </tags>
   </entry>
   <entry>
@@ -95,6 +121,7 @@
         <tag>爬虫</tag>
         <tag>lxml</tag>
         <tag>requests</tag>
+        <tag>pixiv</tag>
       </tags>
   </entry>
   <entry>
@@ -174,16 +201,17 @@
     <url>%2Fblog%2F2019%2F04%2F25%2Frang-xia-zai-su-du-de-dao-jie-fang%2F</url>
     <content type="text"><![CDATA[本篇概述：重新整理了一下关于度盘的黑科技 整理的时候发现 度盘下载器 的作者不维护了╮(╯▽╰)╭，今天也换了多个文件试了下貌似都是HTTP响应超时字样，详见https://www.linesoft.top/archives/4/ 毕竟也是陪伴多年的好朋友，献上一朵❀❀(绝对不是因为其他3作更好用一点的原因) 那么以下3作推荐给大家 加速世界——你相信这个世界能加速吗？加速通道 1加速通道 2加速通道 3proxyee-down 简介：Proxyee Down 是一款开源的免费 HTTP 高速下载器，底层使用netty开发，支持自定义 HTTP 请求下载且支持扩展功能，可以通过安装扩展实现特殊的下载需求。使用手册 预览： github地址：github 直接下载地址(建议看一遍使用手册)：地址 PanDownload 简介：百度盘第三方下载工具 预览： 地址：PanDownload 密码：co50 SpeedPan 简介：SpeedPan又名速盘，一款百度网盘满速下载工具利器 预览： 地址：SpeedPan 密码：7rn6]]></content>
       <categories>
-        <category>资源分享</category>
+        <category>软件分享</category>
       </categories>
       <tags>
+        <tag>软件分享</tag>
         <tag>Others</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Python-Mysql基本使用]]></title>
     <url>%2Fblog%2F2019%2F04%2F22%2Fpy-mysql%2F</url>
-    <content type="text"><![CDATA[本篇概述：python连接mysql的一些操作，欢迎指错 1、MySQLdbpython连接mysql用的模块。MySQLdb主要还是聚焦于如何和数据库进行连接和进行基本的操作，操作的体现形式主要还是进行SQL语句的执行。 安装 1pip3 install mysqlclient 2、基本使用1、数据库连接123456import MySQLdb# 连接数据库 ——&gt; 主机host,端口,用户,密码,数据库,编码conn = MySQLdb.connect(host='localhost',port=3306,user='你的账号',passwd='你的密码',db='你要操作的数据库',charset='utf8')# 连接成功后,创建一个游标对象用于操作数据库# 获取到游标后再进行数据库操作cur = conn.cursor() 2、查询12345678910111213141516171819202122# 查询cur.execute("SELECT VERSION()") # 这里不返回结果，只是执行version = cur.fetchall()# 返回的是元组 (('5.7.14',),)# fetchall() 是返回所有匹配的元组,接收全部的返回结果行# fetchone() 只返回一个匹配的元组,然后游标后移# 我这里用了自己数据库中的一个表演示fetchall()和fetchone()# 1. fetchall()cur.execute("SELECT * from test")a = cur.fetchall()print(a,len(a))# 这里数据量太大,结果就不放出来了# 2. fetchone()cur.execute("SELECT * from test")data = cur.fetchone()i = 0while i&lt;10: print(data) i += 1 data = cur.fetchone() 附图 3、插入12345678910111213141516171819202122232425262728# 插入# sql语句,%s占位sql = "INSERT INTO test(date,tag,title,link) VALUES(%s,%s,%s,%s)"# 1. 插入一条execute() data是元组data = ('19/02/14', 'Android', 'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：', 'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719')try: cur.execute(sql,data) # 事务commit后才会真正插入数据 conn.commit()except Exception,e: # 出错回滚 conn.rollback()finally： cur.close() conn.close() # 断开数据库连接 # 2. 批量插入executemany()datas = [('19/02/14', 'Android', 'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：', 'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719'),('19/02/14', 'IoTDevice', '以家庭路由为例讲解 IoT 逆向工程：', 'http://va.ler.io/myfiles/dva/iot-rev-engineering.pdf')]try: cur.executemany(sql,datas) conn.commit()except Exception,e: # 出错回滚 conn.rollback()finally: cur.close() conn.close() # 断开数据库连接 4、修改，更新12345678910# sqlsql = "UPDATE EMPLOYEE SET AGE = AGE + 1 WHERE SEX = '%c'" % ('M')try: cur.execute(sql) conn.commit()except: conn.rollback()finally: cur.close() conn.close() 5、删除12345678910# sql 删除数据,年龄大于20sql = "DELETE FROM EMPLOYEE WHERE AGE &gt; %s" % (20)try： cur.execute(sql) conn.commit()except: conn.rollback()finally: cur.close() conn.close()]]></content>
+    <content type="text"><![CDATA[本篇概述：记录python——mysql的一些操作 1、MySQLdbpython连接mysql用的模块。MySQLdb主要还是聚焦于如何和数据库进行连接和进行基本的操作，操作的体现形式主要还是进行SQL语句的执行。 安装 1pip3 install mysqlclient 2、基本使用1、数据库连接123456import MySQLdb# 连接数据库 ——&gt; 主机host,端口,用户,密码,数据库,编码conn = MySQLdb.connect(host='localhost',port=3306,user='你的账号',passwd='你的密码',db='你要操作的数据库',charset='utf8')# 连接成功后,创建一个游标对象用于操作数据库# 获取到游标后再进行数据库操作cur = conn.cursor() 2、查询12345678910111213141516171819202122# 查询cur.execute("SELECT VERSION()") # 这里不返回结果，只是执行version = cur.fetchall()# 返回的是元组 (('5.7.14',),)# fetchall() 是返回所有匹配 的元组,接收全部的返回结果行# fetchone() 只返回一个匹配的元组,然后游标后移# 我这里用了自己数据库中的一个表演示fetchall()和fetchone()# 1. fetchall()cur.execute("SELECT * from test")a = cur.fetchall()print(a,len(a))# 这里数据量太大,结果就不放出来了# 2. fetchone()cur.execute("SELECT * from test")data = cur.fetchone()i = 0while i&lt;10: print(data) i += 1 data = cur.fetchone() 附图 3、插入12345678910111213141516171819202122232425262728# 插入# sql语句,%s占位sql = "INSERT INTO test(date,tag,title,link) VALUES(%s,%s,%s,%s)"# 1. 插入一条execute() data是元组data = ('19/02/14', 'Android', 'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：', 'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719')try: cur.execute(sql,data) # 事务commit后才会真正插入数据 conn.commit()except Exception,e: # 出错回滚 conn.rollback()finally： cur.close() conn.close() # 断开数据库连接 # 2. 批量插入executemany()datas = [('19/02/14', 'Android', 'Android\xa0fdget()\xa0优化导致的\xa0binder\xa0UAF\xa0漏洞（CVE-2019-2000）\xa0：', 'https://bugs.chromium.org/p/project-zero/issues/detail?id=1719'),('19/02/14', 'IoTDevice', '以家庭路由为例讲解 IoT 逆向工程：', 'http://va.ler.io/myfiles/dva/iot-rev-engineering.pdf')]try: cur.executemany(sql,datas) conn.commit()except Exception,e: # 出错回滚 conn.rollback()finally: cur.close() conn.close() # 断开数据库连接 4、修改，更新12345678910# sqlsql = "UPDATE EMPLOYEE SET AGE = AGE + 1 WHERE SEX = '%c'" % ('M')try: cur.execute(sql) conn.commit()except: conn.rollback()finally: cur.close() conn.close() 5、删除12345678910# sql 删除数据,年龄大于20sql = "DELETE FROM EMPLOYEE WHERE AGE &gt; %s" % (20)try： cur.execute(sql) conn.commit()except: conn.rollback()finally: cur.close() conn.close()]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -217,6 +245,7 @@
         <tag>爬虫</tag>
         <tag>lxml</tag>
         <tag>requests</tag>
+        <tag>pixiv</tag>
       </tags>
   </entry>
   <entry>
@@ -231,6 +260,7 @@
         <tag>爬虫</tag>
         <tag>lxml</tag>
         <tag>requests</tag>
+        <tag>pixiv</tag>
       </tags>
   </entry>
   <entry>
@@ -242,6 +272,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+        <tag>algolia</tag>
+        <tag>博客搜索功能</tag>
       </tags>
   </entry>
   <entry>
@@ -278,6 +310,7 @@
       <tags>
         <tag>python</tag>
         <tag>爬虫</tag>
+        <tag>proxy</tag>
       </tags>
   </entry>
   <entry>
