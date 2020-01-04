@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/1.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/2.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/26/algolia/3.png">
-<meta property="og:updated_time" content="2019-10-27T07:19:34.131Z">
+<meta property="og:updated_time" content="2020-01-04T11:14:43.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next主题集成 algolia 站内搜索插件">
 <meta name="twitter:description" content="本篇概述：Next主题集成algolia">
@@ -682,7 +682,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  293字
+                  343字
                 </span>
               
 
@@ -744,17 +744,16 @@
 </li>
 </ul>
 <h4 id="3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing"><a href="#3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing" class="headerlink" title="3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing."></a>3. ERROR [Algolia] Please set an <code>HEXO_ALGOLIA_INDEXING_KEY</code> environment variable to enable content indexing.</h4><ul>
-<li><p>这个通常是在hexo algolia的时候出现的问题</p>
-</li>
-<li><p>其实在上面的文章也有说到，这里简单说一下</p>
-</li>
-<li><p>解决方法：</p>
-</li>
-<li><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> HEXO_ALGOLIA_INDEXING_KEY=[你的API Key]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>API Key 是 Search-Only API key</p>
-</li>
+<li>这个通常是在hexo algolia的时候出现的问题</li>
+<li>其实在上面的文章也有说到，这里简单说一下</li>
 </ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> HEXO_ALGOLIA_INDEXING_KEY=[你的API Key]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>API Key 是 Search-Only API key</li>
+</ul>
+<h4 id="4-ERROR-gt-gt-You-might-have-used-an-Admin-Key-or-an-invalid-Key"><a href="#4-ERROR-gt-gt-You-might-have-used-an-Admin-Key-or-an-invalid-Key" class="headerlink" title="4.ERROR &gt;&gt; You might have used an Admin Key or an invalid Key."></a>4.ERROR &gt;&gt; You might have used an Admin Key or an invalid Key.</h4><p>第三点中用的是export命令，有时候会出现这个问题，解决方法：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> HEXO_ALGOLIA_INDEXING_KEY=[你的API <span class="comment">Key]</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>set</code>命令设置即可。</p>
 
       
     </div>
@@ -784,7 +783,7 @@
   <p><span>本文标题:</span>Next主题集成 algolia 站内搜索插件</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月26日 - 19:25:18</p>
-  <p><span>最后更新:</span>2019年10月27日 - 15:19:34</p>
+  <p><span>最后更新:</span>2020年01月04日 - 19:14:43</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/26/algolia/" title="Next主题集成 algolia 站内搜索插件">https://coder-sakura.github.io/blog/2019/03/26/algolia/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/26/algolia/" aria-label="复制成功！"></i></span>
   </p>
@@ -1073,7 +1072,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、简述"><span class="nav-text">一、简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何更新？"><span class="nav-text">二、如何更新？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、问题枪毙名单"><span class="nav-text">三、问题枪毙名单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Not-enough-rights-to-update-an-object-near"><span class="nav-text">1. Not enough rights to update an object near</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Please-provide-an-Algolia-index-name-in-your-hexo-config-yml-flle"><span class="nav-text">2. Please provide an Algolia index name in your hexo _config.yml flle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing"><span class="nav-text">3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、简述"><span class="nav-text">一、简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何更新？"><span class="nav-text">二、如何更新？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、问题枪毙名单"><span class="nav-text">三、问题枪毙名单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Not-enough-rights-to-update-an-object-near"><span class="nav-text">1. Not enough rights to update an object near</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Please-provide-an-Algolia-index-name-in-your-hexo-config-yml-flle"><span class="nav-text">2. Please provide an Algolia index name in your hexo _config.yml flle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-ERROR-Algolia-Please-set-an-HEXO-ALGOLIA-INDEXING-KEY-environment-variable-to-enable-content-indexing"><span class="nav-text">3. ERROR [Algolia] Please set an HEXO_ALGOLIA_INDEXING_KEY environment variable to enable content indexing.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-ERROR-gt-gt-You-might-have-used-an-Admin-Key-or-an-invalid-Key"><span class="nav-text">4.ERROR &gt;&gt; You might have used an Admin Key or an invalid Key.</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1102,7 +1101,7 @@ show_date_time();
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
