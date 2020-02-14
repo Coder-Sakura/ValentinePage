@@ -140,7 +140,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/03/git-note/HeadPicture.png">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/03/03/git-note/1.jpg">
-<meta property="og:updated_time" content="2019-11-01T16:49:56.523Z">
+<meta property="og:updated_time" content="2020-02-14T06:20:37.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git入门">
 <meta name="twitter:description" content="本篇概述：主要记录git的命令和一些git的知识">
@@ -680,7 +680,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  712字
+                  724字
                 </span>
               
 
@@ -749,6 +749,7 @@
 <figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init			</span><br><span class="line">git add ./(name)		</span><br><span class="line">git commit -m <span class="string">'message'</span></span><br><span class="line">git remote add origin [github仓库地址]	</span><br><span class="line"><span class="meta"># 如果出现错误：fatal: remote origin already exists</span></span><br><span class="line"><span class="meta"># 执行 git remote rm origin	#删除分支</span></span><br><span class="line"><span class="meta"># 再执行 git remote add origin [github仓库地址]	#再添加	</span></span><br><span class="line">git push origin master		# 推送到github仓库</span><br><span class="line"><span class="meta"># 如果出现failed to push som refs to…….</span></span><br><span class="line"><span class="meta"># 需要将github仓库的文件同步下来先</span></span><br><span class="line"><span class="meta"># git pull origin master	# pull拉文件下来</span></span><br><span class="line"><span class="meta"># 再执行 git push origin master	# push推文件上去</span></span><br></pre></td></tr></table></figure>
 <h3 id="四、2019-03-30"><a href="#四、2019-03-30" class="headerlink" title="四、2019/03/30"></a>四、2019/03/30</h3><p>删除远程仓库的文件，并上传新的文件</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建一个文件夹</span></span><br><span class="line">git init</span><br><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>[仓库地址]	</span><br><span class="line"><span class="comment"># git remote rm origin</span></span><br><span class="line">git pull <span class="keyword">origin </span>master</span><br><span class="line"><span class="comment"># 然后在本地删除文件</span></span><br><span class="line">git <span class="keyword">add </span>*</span><br><span class="line">git commit -m <span class="string">"del all"</span></span><br><span class="line">git push <span class="keyword">origin </span>master</span><br><span class="line"><span class="comment"># 放入新的文件</span></span><br><span class="line">git <span class="keyword">add </span>*</span><br><span class="line">git commit -m <span class="string">"create new file"</span></span><br><span class="line">git push <span class="keyword">origin </span>master</span><br></pre></td></tr></table></figure>
+<h3 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> remote -v</span><br><span class="line"><span class="comment"># 查看远程仓库地址</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -778,7 +779,7 @@
   <p><span>本文标题:</span>Git入门</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
   <p><span>发布时间:</span>2019年03月03日 - 22:04:14</p>
-  <p><span>最后更新:</span>2019年11月02日 - 00:49:56</p>
+  <p><span>最后更新:</span>2020年02月14日 - 14:20:37</p>
   <p><span>原始链接:</span><a href="/blog/2019/03/03/git-note/" title="Git入门">https://coder-sakura.github.io/blog/2019/03/03/git-note/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2019/03/03/git-note/" aria-label="复制成功！"></i></span>
   </p>
@@ -1063,7 +1064,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、github介绍"><span class="nav-text">一、github介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、github功能"><span class="nav-text">二、github功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、git命令"><span class="nav-text">三、git命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、2019-03-30"><span class="nav-text">四、2019/03/30</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、github介绍"><span class="nav-text">一、github介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、github功能"><span class="nav-text">二、github功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、git命令"><span class="nav-text">三、git命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、2019-03-30"><span class="nav-text">四、2019/03/30</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、"><span class="nav-text">五、</span></a></li></ol></div>
             
 
           </div>
