@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #90a3bd;
+  background: #41449c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3463,18 +3463,20 @@ pre .deletion {
   background-color: #000;
 }
 .hitokoto {
-  font: 25px mFont;
+  font-family: ZCOOLKuaiLe, cursive;
+  font-size: 30px;
+  margin: 0 0;
   color: #fff;
   text-shadow: -2px 0 5px rgba(204,204,204,0.02);
   text-align: center;
   margin-top: 20px;
-  background-image: linear-gradient(to bottom, rgba(255,118,0,0.741), #f9f9f9);
+  background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @font-face {
   font-family: mFont;
-  src: url("https://fonts.loli.net/css2?family=ZCOOL+KuaiLe&display=swap");
+  src: url("https://fonts.loli.net/css2?family=ZCOOL+KuaiLe") format('truetype');
 }
 .posts-expand {
   padding-top: 0px;
