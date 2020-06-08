@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0060ba;
+  background: #90a3bd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3370,11 +3370,10 @@ pre .javascript .function {
   padding: 10px;
 }
 body {
-  background-image: url("/blog/images/background/background.jpg");
+  background-image: url("https://i.loli.net/2020/06/08/X2lyue5i4CZHD6x.jpg");
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: cover;
-  -webkit-animation: Scroll_background 40s linear infinite;
 }
 @-webkit-keyframes Scroll_background {
   from {
@@ -3475,7 +3474,7 @@ pre .deletion {
 }
 @font-face {
   font-family: mFont;
-  src: url("/blog/uploads/custom.ttf");
+  src: url("https://fonts.loli.net/css2?family=ZCOOL+KuaiLe&display=swap");
 }
 .posts-expand {
   padding-top: 0px;
