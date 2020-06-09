@@ -1928,7 +1928,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffc6ff;
+  background: #1f2214;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3463,13 +3463,13 @@ pre .deletion {
   background-color: #000;
 }
 .hitokoto {
+  margin-bottom: 0px;
+  margin-top: 0px;
   font-family: ZCOOLKuaiLe, cursive;
   font-size: 30px;
-  margin: 0 0;
   color: #fff;
   text-shadow: -2px 0 5px rgba(204,204,204,0.02);
   text-align: center;
-  margin-top: 20px;
   background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3593,17 +3593,37 @@ pre .deletion {
 .pagination {
   border: none;
   margin: 0px;
+  background-color: rgba(255,255,255,0);
+  box-shadow: none;
 }
 .pagination .page-number.current {
   border-radius: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  background-color: rgba(52,73,94,0.35);
+  background-color: rgba(68,189,233,0.5);
 }
 .pagination .prev,
 .pagination .next,
 .pagination .page-number {
   margin-bottom: 10px;
   border: none;
+}
+.pagination .page-number {
+  color: #fff;
+  background-color: #f8f8ff;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  border: none !important;
+  transition-property: unset;
+  padding: 5px 15px;
+  background-image: linear-gradient(120deg, #ffc0cb 0%, #00bfff 25%, #00bfff 50%, #4169e1 75%, #00bfff 100%);
+}
+.pagination .page-number:hover {
+  color: #fff !important;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background-image: linear-gradient(120deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
 }
 .pagination .space {
   color: #fff;
