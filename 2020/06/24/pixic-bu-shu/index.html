@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,博客,技术,Python,爬虫,笔记">
+  <meta name="keywords" content="python,pixiv,PixiC,acg,">
 
 
 
@@ -130,17 +130,30 @@
 
 
 
-<meta name="description" content="本篇概述：">
+<meta name="description" content="本篇概述：这是一篇关于PixiC项目的部署文档，旨在帮助感兴趣的各位部署PixiC项目，获取Pixiv的插画和数据。  如果你有一定的基础，那么可以跳过部分节点，文档尽可能从0到1，详细的讲述部署过程。">
+<meta name="keywords" content="python,pixiv,PixiC,acg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="魔法函数">
-<meta property="og:url" content="https://coder-sakura.github.io/blog/2020/06/08/mo-fa-han-shu/index.html">
+<meta property="og:title" content="PixiC部署文档">
+<meta property="og:url" content="https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/index.html">
 <meta property="og:site_name" content="Coder_桜">
-<meta property="og:description" content="本篇概述：">
+<meta property="og:description" content="本篇概述：这是一篇关于PixiC项目的部署文档，旨在帮助感兴趣的各位部署PixiC项目，获取Pixiv的插画和数据。  如果你有一定的基础，那么可以跳过部分节点，文档尽可能从0到1，详细的讲述部署过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-08T03:49:34.745Z">
+<meta property="og:image" content="https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/HeadPicture.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/4lYzvqFcfASXbQd.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/HKuqdAjpwLgRZ9W.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/K4hc6mkF7oTDxMv.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/r6MIpO2Y4i8acT1.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/3czShaArCi79oRW.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/Ne5fyhrPIxJFWLV.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/4FVgPo2KMsCHLhY.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/N6JELuXdaonsMey.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/fJpADMvc1ZrEhP3.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/12/ZLraGynJ42DKjtv.png">
+<meta property="og:updated_time" content="2020-06-24T04:49:44.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔法函数">
-<meta name="twitter:description" content="本篇概述：">
+<meta name="twitter:title" content="PixiC部署文档">
+<meta name="twitter:description" content="本篇概述：这是一篇关于PixiC项目的部署文档，旨在帮助感兴趣的各位部署PixiC项目，获取Pixiv的插画和数据。  如果你有一定的基础，那么可以跳过部分节点，文档尽可能从0到1，详细的讲述部署过程。">
+<meta name="twitter:image" content="https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/HeadPicture.jpg">
 
 
 
@@ -170,13 +183,13 @@
 
 
 
-  <link rel="canonical" href="https://coder-sakura.github.io/blog/2020/06/08/mo-fa-han-shu/">
+  <link rel="canonical" href="https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/">
 
 
 
 
 
-  <title>魔法函数 | Coder_桜</title>
+  <title>PixiC部署文档 | Coder_桜</title>
   
 
 
@@ -378,7 +391,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://coder-sakura.github.io/blog/blog/2020/06/08/mo-fa-han-shu/">
+    <link itemprop="mainEntityOfPage" href="https://coder-sakura.github.io/blog/blog/2020/06/24/pixic-bu-shu/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Coder-Sakura">
@@ -395,7 +408,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">魔法函数</h1>
+          <h1 class="post-title" itemprop="name headline">PixiC部署文档</h1>
         
 
         <div class="post-meta">
@@ -407,8 +420,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-08T11:49:34+08:00">
-                2020-06-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-24T12:44:27+08:00">
+                2020-06-24
               </time>
             
 
@@ -418,6 +431,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/python爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">python爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -426,8 +461,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2020/06/08/mo-fa-han-shu/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/blog/2020/06/08/mo-fa-han-shu/" itemprop="commentCount"></span>
+                <a href="/blog/2020/06/24/pixic-bu-shu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog/2020/06/24/pixic-bu-shu/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -435,7 +470,7 @@
 
           
           
-             <span id="/blog/2020/06/08/mo-fa-han-shu/" class="leancloud_visitors" data-flag-title="魔法函数">
+             <span id="/blog/2020/06/24/pixic-bu-shu/" class="leancloud_visitors" data-flag-title="PixiC部署文档">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -466,7 +501,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  16字
+                  2k字
                 </span>
               
 
@@ -482,7 +517,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  7分钟
                 </span>
               
             </div>
@@ -505,15 +540,333 @@
       
         <hr>
 <blockquote>
-<p> 本篇概述：</p>
+<p> 本篇概述：这是一篇关于<code>PixiC</code>项目的部署文档，旨在帮助感兴趣的各位部署<code>PixiC</code>项目，获取<code>Pixiv</code>的插画和数据。</p>
+<p> 如果你有一定的基础，那么可以跳过部分节点，文档尽可能从0到1，详细的讲述部署过程。</p>
 </blockquote>
 <a id="more"></a>
-
+<img src="/blog/2020/06/24/pixic-bu-shu/HeadPicture.jpg">
 <hr>
-<h2 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h2><h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2><h2 id="备用1"><a href="#备用1" class="headerlink" title="备用1"></a>备用1</h2><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><a href="#-1"> 1</a></li></ul><div class="tab-content"><div class="tab-pane active" id="-1"></div></div></div>
-<h2 id="备用2"><a href="#备用2" class="headerlink" title="备用2"></a>备用2</h2><div><div class="fold_hider"><div class="close hider_title">点击</div></div><div class="fold">
+<h2 id="PixiC部署文档"><a href="#PixiC部署文档" class="headerlink" title="PixiC部署文档"></a>PixiC部署文档</h2><p>Github仓库地址：<a href="https://github.com/Coder-Sakura/PixiC" target="_blank" rel="noopener">PixiC</a></p>
+<p>(此文留存备份)</p>
+<h3 id="1、Python-amp-MySQL"><a href="#1、Python-amp-MySQL" class="headerlink" title="1、Python&amp;MySQL"></a>1、Python&amp;MySQL</h3><hr>
+<h4 id="项目环境"><a href="#项目环境" class="headerlink" title="项目环境"></a>项目环境</h4><p>目前只有<code>win</code>系统的部署文档，用户大多数是<code>win</code>用户，所以目前<code>PixiC</code>未兼容<code>win</code>以外的系统。</p>
+<ul>
+<li>Python 3.7.6</li>
+<li>MySQL 5.7.14</li>
+</ul>
+<h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a><strong>Python</strong></h4><hr>
+<p><code>Python</code>版本尽可能和项目一致,当然高版本也是可以的.</p>
+<ul>
+<li><p>Python官方下载页面: <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a> </p>
+</li>
+<li><p>蓝奏云: <a href="https://python.lanzous.com/iczrxeb" target="_blank" rel="noopener">python-3.7.6-amd64.exe</a></p>
+</li>
+</ul>
+<p><strong>如果你不需要用到数据库,下面MySQL这步可以跳过.</strong></p>
+<ul>
+<li><p>如何判断你需不需要用到数据库呢? </p>
+</li>
+<li><p>如果是只需要下载插画到本地或你根本不知道数据库是什么, 那么下面这一部分可以略过.</p>
+</li>
+</ul>
+<h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a><strong>MySQL</strong></h4><hr>
+<p>MySQL可以使用WampServer，phpStudy，phpEnv等集成环境轻松安装, 也可以只安装MySQL数据库. MySQL版本尽量用最新或者稳定的,项目测试尚未更新MySQL版本.（建议采用最新版本）</p>
+<ul>
+<li>MySQL官方下载: <a href="https://www.mysql.com/downloads/" target="_blank" rel="noopener">https://www.mysql.com/downloads/</a></li>
+<li>WampServer官网下载: <a href="https://www.wampserver.com/" target="_blank" rel="noopener">https://www.wampserver.com/</a></li>
+<li>度盘: <a href="https://pan.baidu.com/s/1hRKTna7KaOBLwzRVxhvdDg" target="_blank" rel="noopener">WampServer3.0.6</a>  提取码: 3ug2</li>
+</ul>
+<p>安装完数据库, 可以使用mysql-cmd来管理, 也可以使用数据库可视化/管理工具进行管理. （建议采用最新版本）</p>
+<ul>
+<li>个人使用的是MySQL-front</li>
+<li>MySQL-front官方下载: <a href="https://mysql-front.en.softonic.com" target="_blank" rel="noopener">https://mysql-front.en.softonic.com</a></li>
+<li>蓝奏云: <a href="https://python.lanzous.com/iczskej" target="_blank" rel="noopener">MySQL-Front_Setup_6.1.1.26.exe</a></li>
+</ul>
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><hr>
+<p>安装Python时记得勾选Add Python to Path以及注意安装路径.</p>
+<p><img src="https://i.loli.net/2020/06/12/4lYzvqFcfASXbQd.png" alt="PixiC-1.png"></p>
+<p><strong>第一个红框框选的位置为Python的安装目录</strong>（重点）, 第二个为添加Python到环境变量.</p>
+<p>安装完成后, Win + R, 输入cmd, 输入Python. 如图,则安装成功.</p>
+<p><img src="https://i.loli.net/2020/06/12/HKuqdAjpwLgRZ9W.png" alt="PixiC-2.png"></p>
+<p>初次安装完python, 建议更新pip版本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<p>使用pip –version查看pip版本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --version</span><br></pre></td></tr></table></figure>
+<hr>
+<p>MySQL及MySQL管理工具安装完成如下:</p>
+<p><img src="https://i.loli.net/2020/06/12/K4hc6mkF7oTDxMv.png" alt="PixiC-3.png"></p>
+<p><img src="https://i.loli.net/2020/06/12/r6MIpO2Y4i8acT1.png" alt="PixiC-4.png"></p>
+<h3 id="2、Python依赖"><a href="#2、Python依赖" class="headerlink" title="2、Python依赖"></a>2、Python依赖</h3><hr>
+<p>安装PixiC需要的第三方库依赖</p>
+<p>下载本项目到本地.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Coder-Sakura/PixiC.git</span><br></pre></td></tr></table></figure>
+<p>或者通过Download ZIP下载</p>
+<p><img src="https://i.loli.net/2020/06/12/3czShaArCi79oRW.png" alt="PixiC-5.png"></p>
+<p>下载或解压到本地后，切换到v2.0目录,，打开cmd（在地址栏输入cmd）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>如果pip更新下载过慢或失败，尝试使用国内豆瓣源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+<p>安装依赖时，出现 You should consider upgrading via the ‘python -m pip install –upgrade pip’ command. 字样时，说明你的pip需要更新，使用提示给出的更新命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<p>安装依赖完毕后，使用pip list检查是否安装成功。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure>
+<h3 id="3、Chrome-amp-Webdriver"><a href="#3、Chrome-amp-Webdriver" class="headerlink" title="3、Chrome&amp;Webdriver"></a>3、Chrome&amp;Webdriver</h3><hr>
+<p>通过Selenium驱动ChromeDriver，获取Chrome上Pixiv账户的Cookie，从而达到绕过Pixiv Google v3验证的目的。</p>
+<p>简而言之，没有这一步的部署，根本获取不了你的Pixiv账号的信息，也就是没有登录（Pixiv对游客账号是有限制的），那么PixiC就无从谈起了。</p>
+<h4 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a><strong>Chrome</strong></h4><hr>
+<p>Chrome官方下载: <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank" rel="noopener">https://www.google.cn/intl/zh-CN/chrome/</a></p>
+<p>蓝奏云: <a href="https://python.lanzous.com/iRniodle0dg" target="_blank" rel="noopener">ChromeSetup.exe</a></p>
+<p><strong>使用Chrome://version, 查看Chrome浏览器版本及个人资料路径（重点）</strong></p>
+<p><img src="https://i.loli.net/2020/06/12/Ne5fyhrPIxJFWLV.png" alt="PixiC-6.png"></p>
+<h4 id="ChromeDriver"><a href="#ChromeDriver" class="headerlink" title="ChromeDriver"></a><strong>ChromeDriver</strong></h4><hr>
+<p>ChromeDriver仓库地址：<a href="http://chromedriver.storage.googleapis.com/index.html" target="_blank" rel="noopener">http://chromedriver.storage.googleapis.com/index.html</a></p>
+<p><strong>根据Chrome版本号，下载对应的ChromeDriver。</strong></p>
+<p>上面是83.0.4103.61，那么这里选择对应的进行下载。</p>
+<p><img src="https://i.loli.net/2020/06/12/4FVgPo2KMsCHLhY.png" alt="PixiC-7.png"></p>
+<p><img src="https://i.loli.net/2020/06/12/N6JELuXdaonsMey.png" alt="PixiC-8.png"></p>
+<p>测试环境在win，这里选择chromedriver_win32.zip下载。</p>
+<p><strong>注意! chromedriver版本要与Chrome浏览器版本对应，如果PixiC中的Selenium驱动不了chromedriver，请检查前面二者的版本号。</strong></p>
+<p>解压完毕，将chromedriver.exe放在python.exe所在目录下（推荐）</p>
+<p>（Python的安装目录不一样,截图仅供参考）</p>
+<p><img src="https://i.loli.net/2020/06/12/fJpADMvc1ZrEhP3.png" alt="PixiC-10.png"></p>
+<p>python.exe所在路径，在第一点的Tips中有描述。</p>
+<p>或者可以通过以下方法找到</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/06/12/ZLraGynJ42DKjtv.png" alt="PixiC-9.png"></p>
+<p>sys.path中也有给出上面截图的路径。</p>
+<h4 id="测试Chromedriver是否正常工作"><a href="#测试Chromedriver是否正常工作" class="headerlink" title="测试Chromedriver是否正常工作"></a><strong>测试Chromedriver是否正常工作</strong></h4><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Chrome()</span><br><span class="line">driver.get(<span class="string">"https://www.pixiv.net"</span>)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+<p>复制到cmd窗口中执行或新建一个py脚本运行</p>
+<p>测试结果: Chrome打开并访问Pixiv，之后关闭Chrome</p>
+<h3 id="4、配置文件"><a href="#4、配置文件" class="headerlink" title="4、配置文件"></a>4、配置文件</h3><hr>
+<p>打开PixiC项目v2.0/config.py文件</p>
+<p>使用sublime text(推荐)/notepad++/pycharm/vscode等等代码编辑器打开。</p>
+<p>蓝奏云: <a href="https://python.lanzous.com/iFl1Ddv2rfi" target="_blank" rel="noopener">Sublime Text3 v3.2.1中文免安装版</a></p>
+<h4 id="定制配置文件"><a href="#定制配置文件" class="headerlink" title="定制配置文件"></a><strong>定制配置文件</strong></h4><hr>
+<p>在PixiC配置之前，先要明确自己利用PixiC的目的是下列哪一种？</p>
+<ol>
+<li>下载Pixiv账号关注/收藏作品原图</li>
+<li>包含1，存储数据到数据库/使用API对接酷q机器人等拓展应用</li>
+</ol>
+<p>第一点的话，阅读简单配置即可。</p>
+<p>第二点的话，请阅读简单配置及拓展，以及MySQL环境需要安装。</p>
+<h4 id="简单配置"><a href="#简单配置" class="headerlink" title="简单配置"></a><strong>简单配置</strong></h4><hr>
+<p><strong>目录路径</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ROOT_PATH</code></td>
+<td><code>Pixiv</code>账号关注画师的作品下载目录</td>
+<td>必填，<code>ROOT_PATH</code>= r’H:\follow’</td>
+</tr>
+<tr>
+<td><code>BOOKMARK_PATH</code></td>
+<td><code>Pixiv</code>账号收藏作品下载目录</td>
+<td>必填，<code>BOOKMARK_PATH</code>= r’H:\bookmark’</td>
+</tr>
+<tr>
+<td><code>PRO_DIR</code></td>
+<td><code>Chrome</code>浏览器用户数据目录</td>
+<td>必填，参照<code>第三节Chrome&amp;Webdriver</code>进行填写</td>
+</tr>
+</tbody>
+</table>
+<p>如果关注和收藏过多，<code>ROOT_PATH</code>和<code>BOOKMARK_PATH</code>建议选择容量剩余较大的硬盘的目录。<br>这里给出下载容量参考：</p>
+<ul>
+<li>355关注用户，3000收藏数限制，120G；5000收藏作品，全下载14G</li>
+<li>2400关注用户，2000收藏数限制，747G</li>
+</ul>
+<p>关于<code>PRO_DIR</code>字段，配置文件中注释有提供参考</p>
+<p><strong>用户信息</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>USER_ID</code></td>
+<td><code>Chrome</code>浏览器登录的<code>Pixiv</code>账号的<code>uid</code></td>
+<td>默认为空</td>
+</tr>
+<tr>
+<td><code>COOKIE_UPDATE_ENABLED</code></td>
+<td>控制是否更新本地<code>cookie</code></td>
+<td>首次运行设置为True</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>pixiv账号的uid可以访问 <a href="https://www.pixiv.net/bookmark.php" target="_blank" rel="noopener">https://www.pixiv.net/bookmark.php</a> 。点击自己头像进入主页，查看地址栏，形如：<a href="https://www.pixiv.net/users/112233" target="_blank" rel="noopener">https://www.pixiv.net/users/112233</a>  ，112233即为uid。</li>
+</ul>
+<ul>
+<li><code>COOKIE_UPDATE_ENABLED</code>项首次运行设置为True以更新cookie到本地，后续运行设置为False可快速启动。</li>
+</ul>
+<p><strong>模块控制开关及轮询周期</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PIXIV_CRAWLER_ENABLED</code></td>
+<td>关注用户作品爬虫模块开关</td>
+<td>默认True，False即关闭</td>
+</tr>
+<tr>
+<td><code>PIXIV_BOOKMARK_ENABLED</code></td>
+<td>收藏作品爬虫模块开关</td>
+<td>默认True，False即关闭</td>
+</tr>
+<tr>
+<td><code>PIXIV_API_ENABLED</code></td>
+<td>API模块开关</td>
+<td>默认False</td>
+</tr>
+<tr>
+<td><code>USERS_CYCLE</code></td>
+<td>关注爬虫轮询间隔</td>
+<td>默认43200秒</td>
+</tr>
+<tr>
+<td><code>USERS_LIMIT</code></td>
+<td>关注爬虫下载作品的收藏最低限制</td>
+<td>默认3000收藏以上</td>
+</tr>
+<tr>
+<td><code>BOOKMARK_CYCLE</code></td>
+<td>收藏爬虫轮询间隔</td>
+<td>默认7200秒</td>
+</tr>
+<tr>
+<td><code>BOOKMARK_LIMIT</code></td>
+<td>收藏爬虫下载作品的收藏最低限制</td>
+<td>默认0收藏，全下载</td>
+</tr>
+</tbody>
+</table>
+<p><code>PIXIV_CRAWLER_ENABLED</code>和<code>PIXIV_BOOKMARK_ENABLED</code>默认开启，<code>PIXIV_API_ENABLED</code>如果需要开启，参考拓展配置。</p>
+<h4 id="拓展配置"><a href="#拓展配置" class="headerlink" title="拓展配置"></a>拓展配置</h4><hr>
+<p><strong>API设置</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>API_HOST</code></td>
+<td>主机ip</td>
+<td>默认本地，0.0.0.0/127.0.0.1</td>
+</tr>
+<tr>
+<td><code>API_PORT</code></td>
+<td>端口</td>
+<td>默认1526</td>
+</tr>
+<tr>
+<td><code>API_THREAD</code></td>
+<td>API线程数</td>
+<td>默认8</td>
+</tr>
+<tr>
+<td><code>RANDOM_LIMIT</code></td>
+<td>API-random接口-最大返回数</td>
+<td>默认10</td>
+</tr>
+<tr>
+<td><code>RANDOM_BOOKMARK_ENABLE</code></td>
+<td>API-random接口-是否开启收藏数筛选</td>
+<td>默认True</td>
+</tr>
+<tr>
+<td><code>RANDOM_BOOKMARK_LIMIT</code></td>
+<td>API-random接口-返回插画最小收藏数</td>
+<td>默认3000收藏数以上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据库连接信息</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DB_ENABLE</code></td>
+<td>数据库开关</td>
+<td>默认为False，True为开启</td>
+</tr>
+<tr>
+<td><code>DB_HOST</code></td>
+<td>主机ip</td>
+<td>默认本地，localhost/127.0.0.1</td>
+</tr>
+<tr>
+<td><code>DB_PORT</code></td>
+<td>端口</td>
+<td>3306</td>
+</tr>
+<tr>
+<td><code>DB_USER</code></td>
+<td>用户名</td>
+<td></td>
+</tr>
+<tr>
+<td><code>DB_PASSWD</code></td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td><code>DB_DATABASE</code></td>
+<td>数据库库名</td>
+<td>moe</td>
+</tr>
+<tr>
+<td><code>DB_CHARSET</code></td>
+<td>数据库/表编码</td>
+<td>utf8mb4</td>
+</tr>
+</tbody>
+</table>
+<p>数据库连接信息根据实际填写，<code>DB_ENABLE</code>看个人需求。</p>
+<p>不过注意：</p>
+<ul>
+<li><code>DB_ENABLE</code>和<code>PIXIV_API_ENABLED</code>同时开启，都为True，可同时使用数据库及API</li>
+<li><code>DB_ENABLE</code>为True，<code>PIXIV_API_ENABLED</code>为False，爬虫模块使用数据库进行存储</li>
+<li><code>DB_ENABLE</code>和<code>PIXIV_API_ENABLED</code>都为False，无法使用数据库及API</li>
+<li><code>DB_ENABLE</code>为False，<code>PIXIV_API_ENABLED</code>为True，结果与上一点相同</li>
+</ul>
+<p><code>DB_DATABASE</code>和<code>DB_CHARSET</code>和<code>v2.0/doc/create.sql</code>一致，建议不修改</p>
+<p>以上便是配置文件部分</p>
+<h3 id="5、运行"><a href="#5、运行" class="headerlink" title="5、运行"></a>5、运行</h3><hr>
+<p>首次运行，配置好配置文件，在Chrome上登录Pixiv账号，关闭Chrome。</p>
+<p>打开<code>cmd</code>，切换到v2.0目录下 / 或进入v2.0目录后再从地址栏打开<code>cmd</code></p>
+<p>输入命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scheduler.py</span><br></pre></td></tr></table></figure>
+<p>接下来享受自己关注画师的作品和收藏的作品下载到本地，或者数据存储进数据库里吧！</p>
 
-</div></div>
       
     </div>
     
@@ -539,12 +892,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>魔法函数</p>
+  <p><span>本文标题:</span>PixiC部署文档</p>
   <p><span>文章作者:</span>Coder-Sakura</p>
-  <p><span>发布时间:</span>2020年06月08日 - 11:49:34</p>
-  <p><span>最后更新:</span>2020年06月08日 - 11:49:34</p>
-  <p><span>原始链接:</span><a href="/blog/2020/06/08/mo-fa-han-shu/" title="魔法函数">https://coder-sakura.github.io/blog/2020/06/08/mo-fa-han-shu/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2020/06/08/mo-fa-han-shu/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年06月24日 - 12:44:27</p>
+  <p><span>最后更新:</span>2020年06月24日 - 12:49:44</p>
+  <p><span>原始链接:</span><a href="/blog/2020/06/24/pixic-bu-shu/" title="PixiC部署文档">https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coder-sakura.github.io/blog/2020/06/24/pixic-bu-shu/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -572,6 +925,18 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/blog/tags/pixiv/" rel="tag"><i class="fa fa-tag"></i> pixiv</a>
+          
+            <a href="/blog/tags/PixiC/" rel="tag"><i class="fa fa-tag"></i> PixiC</a>
+          
+            <a href="/blog/tags/acg/" rel="tag"><i class="fa fa-tag"></i> acg</a>
+          
+        </div>
       
 
       
@@ -685,7 +1050,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -696,7 +1061,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -817,7 +1182,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、"><span class="nav-text">1、</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、"><span class="nav-text">2、</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、"><span class="nav-text">3、</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备用1"><span class="nav-text">备用1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备用2"><span class="nav-text">备用2</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PixiC部署文档"><span class="nav-text">PixiC部署文档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Python-amp-MySQL"><span class="nav-text">1、Python&amp;MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目环境"><span class="nav-text">项目环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python"><span class="nav-text">Python</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL"><span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tips"><span class="nav-text">Tips</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Python依赖"><span class="nav-text">2、Python依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、Chrome-amp-Webdriver"><span class="nav-text">3、Chrome&amp;Webdriver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chrome"><span class="nav-text">Chrome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ChromeDriver"><span class="nav-text">ChromeDriver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试Chromedriver是否正常工作"><span class="nav-text">测试Chromedriver是否正常工作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、配置文件"><span class="nav-text">4、配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定制配置文件"><span class="nav-text">定制配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单配置"><span class="nav-text">简单配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展配置"><span class="nav-text">拓展配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、运行"><span class="nav-text">5、运行</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -858,7 +1223,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共16.5k字</span>
+	<span class="post-count">全站共18.5k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
