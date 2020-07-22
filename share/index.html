@@ -134,7 +134,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="弱水三千只取一瓢">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/share/index.html">
-<meta property="og:site_name" content="Coder_桜">
+<meta property="og:site_name" content="Coder-Sakura">
 <meta property="og:description" content="黑科技加速世界——让下载速度得到解放加速通道 1加速通道 2加速通道 3简介：Proxyee-Down 是一款开源的免费 HTTP 高速下载器，底层使用netty开发，支持自定义 HTTP 请求下载且支持扩展功能，可以通过安装扩展实现特殊的下载需求。 Github地址：点我、使用手册 下载地址：  OneDrive 下载(建议看一遍使用手册) 蓝奏云地址：Proxyee-Down  密码：393y">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-11-03T14:15:45.981Z">
@@ -176,7 +176,7 @@
 
 
 
-  <title>弱水三千只取一瓢 | Coder_桜</title>
+  <title>弱水三千只取一瓢 | Coder-Sakura</title>
   
 
 
@@ -221,7 +221,7 @@
     <div class="custom-logo-site-title">
       <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Coder_桜</span>
+        <span class="site-title">Coder-Sakura</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -703,7 +703,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共19.1k字</span>
+	<span class="post-count">全站共19.2k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -727,6 +727,20 @@ show_date_time();
     setInterval("createtime()",250);
     </script>
 
+	<!-- 不蒜子计数初始值纠正 -->
+    <script>
+        $(document).ready(function() {
+            var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+            var countOffset = 3000;  // 初始化首次数据
+           function fixCount() {                   
+             if ($("#busuanzi_container_site_pv").css("display") != "none")
+               {
+                  $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); // 加上初始数据 
+                  clearInterval(int); // 停止检测
+             }  
+         }           
+        });
+    </script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

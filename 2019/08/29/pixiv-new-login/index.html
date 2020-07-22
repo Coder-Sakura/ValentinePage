@@ -135,7 +135,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决pixiv登录机制添加Google V3验证">
 <meta property="og:url" content="https://coder-sakura.github.io/blog/2019/08/29/pixiv-new-login/index.html">
-<meta property="og:site_name" content="Coder_桜">
+<meta property="og:site_name" content="Coder-Sakura">
 <meta property="og:description" content="本篇概述：本文主要解决爬虫登录pixiv问题。8月份 pixiv 添加 recaptcha_v3(Google V3版本验证)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coder-sakura.github.io/blog/2019/08/29/pixiv-new-login/1.png">
@@ -189,7 +189,7 @@
 
 
 
-  <title>解决pixiv登录机制添加Google V3验证 | Coder_桜</title>
+  <title>解决pixiv登录机制添加Google V3验证 | Coder-Sakura</title>
   
 
 
@@ -234,7 +234,7 @@
     <div class="custom-logo-site-title">
       <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Coder_桜</span>
+        <span class="site-title">Coder-Sakura</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -400,7 +400,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coder_桜">
+      <meta itemprop="name" content="Coder-Sakura">
     </span>
 
     
@@ -963,7 +963,7 @@ show_date_time();
 
 	<div class="theme-info">
 	<div class="powered-by"></div>
-	<span class="post-count">全站共19.1k字</span>
+	<span class="post-count">全站共19.2k字</span>
 	</div>
 
 	<span class="post-meta-divider">|</span>
@@ -987,6 +987,20 @@ show_date_time();
     setInterval("createtime()",250);
     </script>
 
+	<!-- 不蒜子计数初始值纠正 -->
+    <script>
+        $(document).ready(function() {
+            var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+            var countOffset = 3000;  // 初始化首次数据
+           function fixCount() {                   
+             if ($("#busuanzi_container_site_pv").css("display") != "none")
+               {
+                  $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); // 加上初始数据 
+                  clearInterval(int); // 停止检测
+             }  
+         }           
+        });
+    </script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
